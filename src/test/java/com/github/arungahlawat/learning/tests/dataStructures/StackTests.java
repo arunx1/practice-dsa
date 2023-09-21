@@ -1,6 +1,6 @@
-package com.github.arungahlawat.learning.tests;
+package com.github.arungahlawat.learning.tests.dataStructures;
 
-import com.github.arungahlawat.learning.Stack;
+import com.github.arungahlawat.learning.dataStructures.Stack;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

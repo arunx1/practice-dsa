@@ -1,4 +1,4 @@
-package com.github.arungahlawat.learning;
+package com.github.arungahlawat.learning.dataStructures;
 
 public class Stack<T> {
     private StackNode<T> top;
