@@ -1,11 +1,11 @@
-package com.github.arungahlawat.learning.tests;
+package com.github.arungahlawat.learning.tests.dataStructures;
 
-import com.github.arungahlawat.learning.TwoWayNode;
+import com.github.arungahlawat.learning.dataStructures.TwoWayNode;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-public class DoubleLinkedList {
+public class DoubleLinkedListTests {
     public static void main(String[] args) {
         System.out.println("Double linked list options: ");
         System.out.println("----------------------------");

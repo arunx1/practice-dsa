@@ -1,4 +1,4 @@
-package com.github.arungahlawat.learning;
+package com.github.arungahlawat.learning.dataStructures;
 
 public class StackNode<T> {
     final T data;
