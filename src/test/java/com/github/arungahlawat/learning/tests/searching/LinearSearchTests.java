@@ -8,6 +8,7 @@ public class LinearSearchTests {
         int index = linearSearch.search();
         if (index == -1)
             System.out.println("Not found");
-        System.out.printf("Found at index %d", index);
+        else
+            System.out.printf("Found at index %d", index);
     }
 }
