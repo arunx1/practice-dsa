@@ -3,6 +3,8 @@ package com.github.arungahlawat.learning.tests.ps;
 import com.github.arungahlawat.learning.ps.ArrayProblems;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class ArrayProblemTests {
 
     @Test(description = "Verify moving all 0's to end of array")
@@ -39,5 +41,14 @@ public class ArrayProblemTests {
         ArrayProblems arrayProblems = new ArrayProblems(4, 1, 9, 1, 3, 2, 2, 1);
         int containerArea = arrayProblems.findContainerWithMostWater();
         System.out.println(containerArea);
+    }
+
+    @Test(description = "Verify finding three sum")
+    public void verifyFindingThreeSum() {
+        ArrayProblems arrayProblems = new ArrayProblems(-2,0,1,1,2);
+        int target = 0;
+        List<List<Integer>> indices = arrayProblems.findThreeSum(target);
+        System.out.printf("Three sum indices for %d are : \n", target);
+        arrayProblems.printListOfList(indices);
     }
 }
