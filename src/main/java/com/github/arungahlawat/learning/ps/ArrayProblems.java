@@ -1,7 +1,8 @@
 package com.github.arungahlawat.learning.ps;
 
-import java.util.HashMap;
-import java.util.Map;
+import com.github.arungahlawat.learning.sorting.QuickSort;
+
+import java.util.*;
 
 public class ArrayProblems {
     int[] data;
@@ -20,6 +21,18 @@ public class ArrayProblems {
         for (int datum : array)
             System.out.printf("%2d\t", datum);
         System.out.println();
+    }
+
+    public void print(List<Integer> array) {
+        for (int datum : array)
+            System.out.printf("%2d\t", datum);
+        System.out.println();
+    }
+
+    public void printListOfList(List<List<Integer>> array) {
+        for (List<Integer> arrayList : array) {
+            print(arrayList);
+        }
     }
 
     private void swap(int[] arr, int i, int j) {
@@ -124,5 +137,26 @@ public class ArrayProblems {
                 right--;
         }
         return maxArea;
+    }
+
+    public List<List<Integer>> findThreeSum(int target) {
+        new QuickSort(this.data).sort();
+        Set<List<Integer>> s = new HashSet<>();
+        for (int i = 0; i < this.data.length; i++) {
+            int j = i + 1;
+            int k = this.data.length - 1;
+            while (j < k) {
+                int sum = this.data[i] + this.data[j] + this.data[k];
+                if (sum == target) {
+                    s.add(Arrays.asList(this.data[i], this.data[j], this.data[k]));
+                    j++;
+                    k--;
+                } else if (sum < target) {
+                    j++;
+                } else
+                    k--;
+            }
+        }
+        return new ArrayList<>(s);
     }
 }
