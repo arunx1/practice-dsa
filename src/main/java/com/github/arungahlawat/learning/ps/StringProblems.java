@@ -137,5 +137,50 @@ public class StringProblems {
         return urlifyString(inputCharArray, trueLength, find, replaceWith);
     }
 
+    public boolean isPermutationOfPalindrome(String input, boolean caseInSensitive) {
+        int[] charHashTable = createCharHashTable(input, caseInSensitive);
+        boolean foundOdd = false;
+        for (int j : charHashTable) {
+            if (j % 2 == 1) {
+                if (foundOdd)
+                    return false;
+                foundOdd = true;
+            }
+        }
+        return true;
+    }
+
+    public int[] createCharHashTable(String input, boolean caseSensitive) {
+        int lowerIndex = 'a';
+        int upperIndex = 'z';
+        int indexMultiplier = 2;
+        if (!caseSensitive)
+            indexMultiplier = 1;
+        int[] charHashTable = new int[indexMultiplier * (upperIndex - lowerIndex + 1)];
+        char[] inputCharArray = input.toCharArray();
+        for (char c : inputCharArray) {
+            int currentCharHash = getCharHash(c, caseSensitive);
+            if (currentCharHash != -1)
+                charHashTable[currentCharHash]++;
+        }
+        return charHashTable;
+    }
+
+    private int getCharHash(char current, boolean caseSensitive) {
+        int lowerAIndex = 'a';
+        int lowerZIndex = 'z';
+        int upperAIndex = 'A';
+        int upperZIndex = 'Z';
+        int upperCaseOffset = lowerZIndex - lowerAIndex + 1;
+        if (!caseSensitive)
+            upperCaseOffset = 0;
+        if (lowerAIndex <= (int) current && (int) current <= lowerZIndex)
+            return (int) current - lowerAIndex;
+        else if (upperAIndex <= (int) current && (int) current <= upperZIndex)
+            return upperCaseOffset + (int) current - upperAIndex;
+        else
+            return -1;
+    }
+
 
 }

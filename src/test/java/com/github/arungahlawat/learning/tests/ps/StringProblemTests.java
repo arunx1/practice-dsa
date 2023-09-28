@@ -47,4 +47,12 @@ public class StringProblemTests {
         String urlifiedString = stringProblems.urlifyStringGeneric("Hello@World!@@Hi..",'@',"%40");
         System.out.printf("URLified string is: %s", urlifiedString);
     }
+
+    @Test(description = "Verify string is permutation of palindrome string")
+    public void verifyStringIsAPermutationOfPalindrome(){
+        String input = "NaMAN";
+        StringProblems stringProblems = new StringProblems();
+        boolean isPermutationOfPalindrome = stringProblems.isPermutationOfPalindrome(input,true);
+        System.out.printf("%s is permutation of palindrome? %s",input,isPermutationOfPalindrome);
+    }
 }
