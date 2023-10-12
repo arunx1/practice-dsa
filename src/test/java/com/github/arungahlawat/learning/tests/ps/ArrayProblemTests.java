@@ -51,4 +51,22 @@ public class ArrayProblemTests {
         System.out.printf("Three sum indices for %d are : \n", target);
         arrayProblems.printListOfList(indices);
     }
+
+    @Test(description = "Verify rotating a matrix 90 degrees clockwise")
+    public void verifyRotatingMatrixClockWise() {
+        ArrayProblems arrayProblems = new ArrayProblems();
+        int[][] matrix = {{4,7,9,2},{5,11,8,17},{6,13,21,18},{27,29,15,10}};
+        arrayProblems.rotateMatrixClockwise(matrix);
+        System.out.println("Rotated matrix :");
+        arrayProblems.print(matrix);
+    }
+
+    @Test(description = "Verify rotating a matrix 180 degrees clockwise")
+    public void verifyRotatingMatrixClockWise180() {
+        ArrayProblems arrayProblems = new ArrayProblems();
+        int[][] matrix = {{4,7,9,2},{5,11,8,17},{6,13,21,18},{27,29,15,10}};
+        arrayProblems.rotateMatrixClockwise(matrix);
+        System.out.println("Rotated matrix :");
+        arrayProblems.print(matrix);
+    }
 }
