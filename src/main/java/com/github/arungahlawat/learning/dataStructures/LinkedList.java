@@ -3,6 +3,24 @@ package com.github.arungahlawat.learning.dataStructures;
 public class LinkedList {
     private Node head;
 
+    public LinkedList(int... data) {
+        Node lastNode = null;
+        for (int datum : data) {
+            Node node = new Node(datum);
+            if (head == null) {
+                head = node;
+                lastNode = head;
+            } else {
+                lastNode.next = node;
+                lastNode = lastNode.next;
+            }
+        }
+    }
+
+    public Node getHead(){
+        return this.head;
+    }
+
     public void add(int data) {
         Node currentNode = new Node(data);
         if (head == null) {
@@ -41,8 +59,8 @@ public class LinkedList {
             System.out.println(data + " not found.");
     }
 
-    public void clear(){
-        head=null;
+    public void clear() {
+        head = null;
         System.out.println("List cleared");
     }
 
@@ -52,7 +70,7 @@ public class LinkedList {
             return;
         }
         Node pointer = head;
-        System.out.print("HEAD");
+        System.out.print("\nHEAD");
         while (pointer != null) {
             System.out.print(" ---> ");
             System.out.print(pointer.data);
@@ -61,7 +79,7 @@ public class LinkedList {
         System.out.println(" ---> X");
     }
 
-    public boolean isEmpty(){
+    public boolean isEmpty() {
         return head == null;
     }
 }
