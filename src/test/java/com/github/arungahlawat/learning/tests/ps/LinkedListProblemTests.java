@@ -13,4 +13,13 @@ public class LinkedListProblemTests {
         linkedListProblems.removeDuplicates(linkedList);
         linkedList.print();
     }
+
+    @Test(description = "Remove duplicates from unsorted linked list using buffer")
+    public void removeDuplicatesUsingBufferTest(){
+        LinkedList linkedList = new LinkedList(10,10,10,23,0,10,10,23,45,18);
+        linkedList.print();
+        LinkedListProblems linkedListProblems = new LinkedListProblems();
+        linkedListProblems.removeDuplicatesUsingBuffer(linkedList);
+        linkedList.print();
+    }
 }
