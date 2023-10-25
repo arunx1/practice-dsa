@@ -40,4 +40,25 @@ public class LinkedListProblems {
             currentNode = currentNode.next;
         }
     }
+
+    public void reverse(LinkedList linkedList){
+        Node head = linkedList.getHead();
+        head = reverse(head);
+        linkedList.setHead(head);
+    }
+
+    public Node reverse(Node head){
+        if (head == null)
+            return head;
+        Node prev = null;
+        Node current = head;
+        while (current!=null){
+            Node temp = current.next;
+            current.next=prev;
+            prev=current;
+            current = temp;
+        }
+        head = prev;
+        return head;
+    }
 }
