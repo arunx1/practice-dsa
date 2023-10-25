@@ -22,4 +22,13 @@ public class LinkedListProblemTests {
         linkedListProblems.removeDuplicatesUsingBuffer(linkedList);
         linkedList.print();
     }
+
+    @Test(description = "Reverse linked list")
+    public void reverseLinkedList(){
+        LinkedList linkedList = new LinkedList(10,10,10,23,0,10,10,23,45,18);
+        linkedList.print();
+        LinkedListProblems linkedListProblems = new LinkedListProblems();
+        linkedListProblems.reverse(linkedList);
+        linkedList.print();
+    }
 }
