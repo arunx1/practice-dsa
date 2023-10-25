@@ -3,7 +3,6 @@ package com.github.arungahlawat.learning.tests.ps.dataProviders;
 import org.testng.annotations.DataProvider;
 
 public class ArrayDataProviders {
-
     @DataProvider(name = "TwoSumTestData")
     public Object[][] getTwoSumTestData() {
         return new Object[][]{
@@ -121,6 +120,25 @@ public class ArrayDataProviders {
                 121,
                 1234554321,
                 123454321,
+        };
+    }
+
+    @DataProvider(name = "ContainerWithMaxWaterTestData")
+    public Object[] getContainerWithMaxWaterTestData() {
+        return new Object[]{
+                new int[]{1, 8, 6, 2, 5, 4, 8, 3, 7},
+                new int[]{1, 1},
+        };
+    }
+
+    @DataProvider(name = "IntegerToRomanTestData")
+    public Object[] getIntegerToRomanTestData() {
+        return new Object[]{
+                9913,
+                3,
+                58,
+                1994,
+                20000
         };
     }
 }

@@ -205,4 +205,30 @@ public class LeetCodeTests {
         boolean isPalindrome = p09PalindromeNumber.isPalindrome(x);
         System.out.printf("Input number is palindrome? : %s\n", isPalindrome);
     }
+
+    @Test(description = "11 Container With Most Water : Find max water container area",
+            dataProvider = "ContainerWithMaxWaterTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC11", "Arrays", "Container With Most Water"})
+    public void getContainerWithMaxArea(int[] height) {
+        P_10_ContainerWithMostWater p10ContainerWithMostWater = new P_10_ContainerWithMostWater();
+        ArrayProblems arrayProblems = new ArrayProblems();
+        System.out.print("Input height array : ");
+        arrayProblems.print(height);
+        int maxArea = p10ContainerWithMostWater.maxArea(height);
+        System.out.printf("Container area with max water : %d\n", maxArea);
+    }
+
+    @Test(description = "12  Integer to Roman : Return roman representation of a number",
+            dataProvider = "IntegerToRomanTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC11", "Strings", "Integer to Roman"})
+    public void printRomanRepresentationOfANumber(int x) {
+        P_11_IntegerToRoman p11IntegerToRoman = new P_11_IntegerToRoman();
+        System.out.printf("Input number: %d\n", x);
+        String romanString = p11IntegerToRoman.intToRoman(x);
+        System.out.printf("Roman number for %d is '%s'\n", x, romanString);
+    }
 }
