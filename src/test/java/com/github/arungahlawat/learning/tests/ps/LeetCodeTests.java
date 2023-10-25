@@ -205,4 +205,18 @@ public class LeetCodeTests {
         boolean isPalindrome = p09PalindromeNumber.isPalindrome(x);
         System.out.printf("Input number is palindrome? : %s\n", isPalindrome);
     }
+
+    @Test(description = "11 Container With Most Water : Find max water container area",
+            dataProvider = "ContainerWithMaxWaterTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC11", "Arrays", "Container With Most Water"})
+    public void getContainerWithMaxArea(int[] height) {
+        P_10_ContainerWithMostWater p10ContainerWithMostWater = new P_10_ContainerWithMostWater();
+        ArrayProblems arrayProblems = new ArrayProblems();
+        System.out.print("Input height array : ");
+        arrayProblems.print(height);
+        int maxArea = p10ContainerWithMostWater.maxArea(height);
+        System.out.printf("Container area with max water : %d\n", maxArea);
+    }
 }

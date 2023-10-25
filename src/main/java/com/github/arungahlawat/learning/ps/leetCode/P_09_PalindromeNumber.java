@@ -21,11 +21,6 @@ Constraints:
     * -2^31 <= x <= 2^31 - 1
  */
 public class P_09_PalindromeNumber {
-    public static void main(String[] args) {
-        P_09_PalindromeNumber p09PalindromeNumber = new P_09_PalindromeNumber();
-        p09PalindromeNumber.isPalindrome(999999999);
-    }
-
     public boolean isPalindrome(int x) {
         if (x < 0)
             return false;
