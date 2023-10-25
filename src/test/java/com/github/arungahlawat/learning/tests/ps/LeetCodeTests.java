@@ -219,4 +219,16 @@ public class LeetCodeTests {
         int maxArea = p10ContainerWithMostWater.maxArea(height);
         System.out.printf("Container area with max water : %d\n", maxArea);
     }
+
+    @Test(description = "12  Integer to Roman : Return roman representation of a number",
+            dataProvider = "IntegerToRomanTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC11", "Strings", "Integer to Roman"})
+    public void printRomanRepresentationOfANumber(int x) {
+        P_11_IntegerToRoman p11IntegerToRoman = new P_11_IntegerToRoman();
+        System.out.printf("Input number: %d\n", x);
+        String romanString = p11IntegerToRoman.intToRoman(x);
+        System.out.printf("Roman number for %d is '%s'\n", x, romanString);
+    }
 }

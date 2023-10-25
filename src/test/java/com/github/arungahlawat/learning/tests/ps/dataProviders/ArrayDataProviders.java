@@ -130,4 +130,15 @@ public class ArrayDataProviders {
                 new int[]{1, 1},
         };
     }
+
+    @DataProvider(name = "IntegerToRomanTestData")
+    public Object[] getIntegerToRomanTestData() {
+        return new Object[]{
+                9913,
+                3,
+                58,
+                1994,
+                20000
+        };
+    }
 }
