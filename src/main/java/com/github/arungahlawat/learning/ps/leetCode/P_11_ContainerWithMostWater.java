@@ -21,7 +21,7 @@ Constraints:
     * 2 <= n <= 10^5
     * 0 <= height[i] <= 10^4
  */
-public class P_10_ContainerWithMostWater {
+public class P_11_ContainerWithMostWater {
     public int maxArea(int[] height) {
         int maxArea = 0, left = 0, right = height.length - 1;
         while (left < right) {

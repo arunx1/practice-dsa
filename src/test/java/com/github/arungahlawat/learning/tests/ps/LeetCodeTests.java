@@ -212,23 +212,35 @@ public class LeetCodeTests {
             threadPoolSize = 10,
             groups = {"LC11", "Arrays", "Container With Most Water"})
     public void getContainerWithMaxArea(int[] height) {
-        P_10_ContainerWithMostWater p10ContainerWithMostWater = new P_10_ContainerWithMostWater();
+        P_11_ContainerWithMostWater p11ContainerWithMostWater = new P_11_ContainerWithMostWater();
         ArrayProblems arrayProblems = new ArrayProblems();
         System.out.print("Input height array : ");
         arrayProblems.print(height);
-        int maxArea = p10ContainerWithMostWater.maxArea(height);
+        int maxArea = p11ContainerWithMostWater.maxArea(height);
         System.out.printf("Container area with max water : %d\n", maxArea);
     }
 
-    @Test(description = "12  Integer to Roman : Return roman representation of a number",
+    @Test(description = "12 Integer to Roman : Return roman representation of a number",
             dataProvider = "IntegerToRomanTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
             threadPoolSize = 10,
-            groups = {"LC11", "Strings", "Integer to Roman"})
+            groups = {"LC12", "Strings", "Integer to Roman"})
     public void printRomanRepresentationOfANumber(int x) {
-        P_11_IntegerToRoman p11IntegerToRoman = new P_11_IntegerToRoman();
+        P_12_IntegerToRoman p12IntegerToRoman = new P_12_IntegerToRoman();
         System.out.printf("Input number: %d\n", x);
-        String romanString = p11IntegerToRoman.intToRoman(x);
+        String romanString = p12IntegerToRoman.intToRoman(x);
         System.out.printf("Roman number for %d is '%s'\n", x, romanString);
+    }
+
+    @Test(description = "13 Roman to Integer : Return integer representation of a roman number",
+            dataProvider = "RomanToIntegerTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC13", "Strings", "Roman to Integer"})
+    public void printIntegerRepresentationOfARomanNumber(String s) {
+        P_13_RomanToInteger p13RomanToInteger = new P_13_RomanToInteger();
+        System.out.printf("Input string: %s\n", s);
+        int integerNumber = p13RomanToInteger.romanToInt(s);
+        System.out.printf("Roman number to integer for %s is '%d'\n", s, integerNumber);
     }
 }
