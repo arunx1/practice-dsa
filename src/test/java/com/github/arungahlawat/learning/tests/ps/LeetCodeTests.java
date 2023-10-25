@@ -193,4 +193,16 @@ public class LeetCodeTests {
         int convertedNumber = p08StringToIntegerConversion.myAtoi(s);
         System.out.printf("Parsed number: '%d'\n", convertedNumber);
     }
+
+    @Test(description = "09 Palindrome Number : Check if a number is palindrome or not",
+            dataProvider = "PalindromeNumberTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC09", "Numbers", "Palindrome Number"})
+    public void findIfNumberIsPalindrome(int x) {
+        P_09_PalindromeNumber p09PalindromeNumber = new P_09_PalindromeNumber();
+        System.out.printf("Input number: %d\n", x);
+        boolean isPalindrome = p09PalindromeNumber.isPalindrome(x);
+        System.out.printf("Input number is palindrome? : %s\n", isPalindrome);
+    }
 }

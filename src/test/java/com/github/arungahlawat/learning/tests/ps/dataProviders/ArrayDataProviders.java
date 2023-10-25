@@ -104,4 +104,23 @@ public class ArrayDataProviders {
                 "-6147483648"
         };
     }
+
+    @DataProvider(name = "PalindromeNumberTestData")
+    public Object[] getPalindromeNumberTestData() {
+        return new Object[]{
+                1,
+                123456789,
+                1999999999,
+                1999999990,
+                -2147483648,
+                2147483647,
+                -846384741,
+                -1,
+                0,
+                -121,
+                121,
+                1234554321,
+                123454321,
+        };
+    }
 }
