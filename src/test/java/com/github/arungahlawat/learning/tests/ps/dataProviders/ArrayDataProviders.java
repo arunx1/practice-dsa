@@ -141,4 +141,13 @@ public class ArrayDataProviders {
                 20000
         };
     }
+
+    @DataProvider(name = "RomanToIntegerTestData")
+    public Object[] getRomanToIntegerTestData() {
+        return new Object[]{
+                "III",
+                "LVIII",
+                "MCMXCIV"
+        };
+    }
 }

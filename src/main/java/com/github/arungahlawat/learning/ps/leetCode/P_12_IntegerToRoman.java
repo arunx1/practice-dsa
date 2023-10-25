@@ -47,7 +47,7 @@ Constraints:
     * 1 <= num <= 3999
 
  */
-public class P_11_IntegerToRoman {
+public class P_12_IntegerToRoman {
     public String intToRoman(int num) {
         Stack<String> romanStack = new Stack<String>() {{
             push("I");
