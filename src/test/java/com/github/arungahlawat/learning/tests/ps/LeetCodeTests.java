@@ -181,4 +181,16 @@ public class LeetCodeTests {
         int convertedNumber = p07ReverseInteger.reverse(x);
         System.out.printf("Reverted number: %d\n", convertedNumber);
     }
+
+    @Test(description = "08 String to integer (atoi) : Parse and convert string to integer",
+            dataProvider = "StringToIntegerTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC08", "Numbers", "String to Integer"})
+    public void stringToInteger(String s) {
+        P_08_StringToIntegerConversion p08StringToIntegerConversion = new P_08_StringToIntegerConversion();
+        System.out.printf("Input string: '%s'\n", s);
+        int convertedNumber = p08StringToIntegerConversion.myAtoi(s);
+        System.out.printf("Parsed number: '%d'\n", convertedNumber);
+    }
 }

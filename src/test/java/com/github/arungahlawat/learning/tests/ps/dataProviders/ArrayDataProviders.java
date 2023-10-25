@@ -82,4 +82,26 @@ public class ArrayDataProviders {
                 121
         };
     }
+
+    @DataProvider(name = "StringToIntegerTestData")
+    public Object[] getStringToIntegerTestData() {
+        return new Object[]{
+                "42",
+                "   -42",
+                "4193 with words",
+                "words and 987",
+                "+1",
+                "+-1",
+                "++1",
+                "--1",
+                "  --1",
+                "  - 1",
+                "2147483648",
+                "2147483647",
+                "-2147483648",
+                "-2147483649",
+                "-2147483647",
+                "-6147483648"
+        };
+    }
 }
