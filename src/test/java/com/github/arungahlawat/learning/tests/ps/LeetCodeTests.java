@@ -274,4 +274,19 @@ public class LeetCodeTests {
         System.out.printf("Three sum indices for %d are : \n", 0);
         arrayProblems.printListOfList(result);
     }
+
+    @Test(description = "16 Three Sum closest : Find the closest triplet sum to target",
+            dataProvider = "ThreeSumClosestTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC16", "Arrays", "Three Sum Closest"})
+    public void findTripletsWithSumClosestToTarget(int[] nums, int target) {
+        P_16_ThreeSumClosest p16ThreeSumClosest = new P_16_ThreeSumClosest();
+        ArrayProblems arrayProblems = new ArrayProblems();
+        System.out.print("Input array : ");
+        arrayProblems.print(nums);
+        System.out.printf("Target: %d\n", target);
+        int closestSum = p16ThreeSumClosest.threeSumClosest(nums, target);
+        System.out.printf("Three sum closest to %d is : %d\n", target, closestSum);
+    }
 }
