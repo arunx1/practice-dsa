@@ -150,4 +150,13 @@ public class ArrayDataProviders {
                 "MCMXCIV"
         };
     }
+
+    @DataProvider(name = "LongestCommonPrefixTestData")
+    public Object[] getLongestCommonPrefixTestDataTestData() {
+        return new Object[][]{
+                {"arun", "aru", "arunk", "arunkum"},
+                {"flower", "flow", "flight"},
+                {"dog", "racecar", "car"},
+        };
+    }
 }

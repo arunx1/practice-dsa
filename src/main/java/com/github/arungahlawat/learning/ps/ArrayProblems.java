@@ -23,6 +23,12 @@ public class ArrayProblems {
         System.out.println();
     }
 
+    public void print(String[] array) {
+        for (String datum : array)
+            System.out.printf("%s  ", datum);
+        System.out.println();
+    }
+
     public void print(int[][] matrix) {
         int rows = matrix.length;
         if (rows == 0)

@@ -243,4 +243,18 @@ public class LeetCodeTests {
         int integerNumber = p13RomanToInteger.romanToInt(s);
         System.out.printf("Roman number to integer for %s is '%d'\n", s, integerNumber);
     }
+
+    @Test(description = "14 Longest Common Prefix : Find longest common prefix from array of strings",
+            dataProvider = "LongestCommonPrefixTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC14", "Strings", "Longest Common Prefix"})
+    public void findLongestCommonPrefix(String[] strs) {
+        P_14_LongestCommonPrefix p14LongestCommonPrefix = new P_14_LongestCommonPrefix();
+        ArrayProblems arrayProblems = new ArrayProblems();
+        System.out.print("Input strings: ");
+        arrayProblems.print(strs);
+        String commonPrefix = p14LongestCommonPrefix.longestCommonPrefix(strs);
+        System.out.printf("Longest common prefix is: '%s'\n", commonPrefix);
+    }
 }
