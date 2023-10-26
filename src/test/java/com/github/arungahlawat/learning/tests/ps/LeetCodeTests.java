@@ -7,6 +7,8 @@ import com.github.arungahlawat.learning.ps.leetCode.*;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class LeetCodeTests {
     @BeforeMethod()
     public void beforeMethod() {
@@ -256,5 +258,20 @@ public class LeetCodeTests {
         arrayProblems.print(strs);
         String commonPrefix = p14LongestCommonPrefix.longestCommonPrefix(strs);
         System.out.printf("Longest common prefix is: '%s'\n", commonPrefix);
+    }
+
+    @Test(description = "15 Three Sum : Find all the triplets whose sum is 0",
+            dataProvider = "ThreeSumTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC15", "Arrays", "Three Sum"})
+    public void findTripletsWithSumEqualToZero(int[] nums) {
+        P_15_ThreeSum p15ThreeSum = new P_15_ThreeSum();
+        ArrayProblems arrayProblems = new ArrayProblems();
+        System.out.print("Input array : ");
+        arrayProblems.print(nums);
+        List<List<Integer>> result = p15ThreeSum.threeSum(nums);
+        System.out.printf("Three sum indices for %d are : \n", 0);
+        arrayProblems.printListOfList(result);
     }
 }

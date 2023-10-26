@@ -159,4 +159,14 @@ public class ArrayDataProviders {
                 {"dog", "racecar", "car"},
         };
     }
+
+    @DataProvider(name = "ThreeSumTestData")
+    public Object[] getThreeSumTestDataTestData() {
+        return new Object[]{
+                new int[]{-1,0,1,2,-1,-4},
+                new int[]{0,1,1},
+                new int[]{0,0,0},
+                new int[]{0,0,0,0},
+        };
+    }
 }

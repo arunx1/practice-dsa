@@ -19,7 +19,7 @@ public class ArrayProblems {
 
     public void print(int[] array) {
         for (int datum : array)
-            System.out.printf("%2d\t", datum);
+            System.out.printf("%2d  ", datum);
         System.out.println();
     }
 
