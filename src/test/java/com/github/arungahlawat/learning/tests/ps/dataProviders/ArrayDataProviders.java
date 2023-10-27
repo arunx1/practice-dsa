@@ -151,6 +151,7 @@ public class ArrayDataProviders {
         };
     }
 
+
     @DataProvider(name = "LetterCombinationOfANumberTestData")
     public Object[] getLetterCombinationOfANumberTestData() {
         return new Object[]{
@@ -214,6 +215,18 @@ public class ArrayDataProviders {
                 {new int[]{1}, 1},
                 {new int[]{1, 2}, 1},
                 {new int[]{1, 2}, 2},
+        };
+    }
+
+    @DataProvider(name = "ValidParenthesesTestData")
+    public Object[] getValidParenthesesTestData() {
+        return new Object[]{
+                "()",
+                "()[]{}",
+                "(]",
+                "{[()]}",
+                "]",
+                "(",
         };
     }
 }
