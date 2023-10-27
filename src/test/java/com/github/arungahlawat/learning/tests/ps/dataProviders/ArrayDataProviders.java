@@ -250,4 +250,16 @@ public class ArrayDataProviders {
                 {new int[]{}},
         };
     }
+
+    @DataProvider(name = "SwapNodesInPairsTestData")
+    public Object[] getSwapNodesInPairsTestData() {
+        return new Object[]{
+                new int[]{1, 2, 3, 4},
+                new int[]{},
+                new int[]{1},
+                new int[]{1, 2, 3, 4, 5},
+                new int[]{1, 2, 3, 4, 5, 6},
+                new int[]{1, 2},
+        };
+    }
 }

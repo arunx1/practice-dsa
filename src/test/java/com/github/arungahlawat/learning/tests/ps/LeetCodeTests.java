@@ -379,7 +379,7 @@ public class LeetCodeTests {
         for (int i = 0; i < lists.length; i++) {
             LinkedList linkedList = new LinkedList(lists[i]);
             listHeads[i] = linkedList.getHead();
-            System.out.printf("List %d : ", i+1);
+            System.out.printf("List %d : ", i + 1);
             linkedList.print();
         }
         P_23_MergeKSortedLists p23MergeKSortedLists = new P_23_MergeKSortedLists();
@@ -388,5 +388,21 @@ public class LeetCodeTests {
         LinkedList resultList = new LinkedList();
         resultList.setHead(result);
         resultList.print();
+    }
+
+    @Test(description = "24 Swap Nodes in Pairs",
+            dataProvider = "SwapNodesInPairsTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC24", "Linked Lists", "Swap Nodes in Pairs"})
+    public void swapNodesInPairs(int[] list) {
+        LinkedList linkedList = new LinkedList(list);
+        System.out.print("List: ");
+        linkedList.print();
+        P_24_SwapNodesInPairs p24SwapNodesInPairs = new P_24_SwapNodesInPairs();
+        ListNode result = p24SwapNodesInPairs.swapPairs(linkedList.getHead());
+        System.out.print("List after swap:");
+        linkedList.setHead(result);
+        linkedList.print();
     }
 }
