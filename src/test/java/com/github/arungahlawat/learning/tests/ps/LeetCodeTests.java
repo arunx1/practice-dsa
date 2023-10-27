@@ -289,4 +289,18 @@ public class LeetCodeTests {
         int closestSum = p16ThreeSumClosest.threeSumClosest(nums, target);
         System.out.printf("Three sum closest to %d is : %d\n", target, closestSum);
     }
+
+    @Test(description = "19 Letter combination of a phone number : return list of letter combinations",
+            dataProvider = "LetterCombinationOfANumberTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC19", "Strings", "Letter combination of a phone number"})
+    public void findLetterCombinationOfANumber(String digits) {
+        P_19_LetterCombinationOfAPhoneNumber p19LetterCombinationOfAPhoneNumber = new P_19_LetterCombinationOfAPhoneNumber();
+        ArrayProblems arrayProblems = new ArrayProblems();
+        System.out.printf("Input strings: %s\n",digits);
+        List<String> combinations = p19LetterCombinationOfAPhoneNumber.letterCombinations(digits);
+        System.out.println("Combinations:");
+        arrayProblems.print(combinations);
+    }
 }

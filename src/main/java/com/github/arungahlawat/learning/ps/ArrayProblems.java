@@ -36,8 +36,8 @@ public class ArrayProblems {
         int cols = matrix[0].length;
         if (cols == 0)
             return;
-        for (int row=0;row<rows;row++){
-            for (int col=0;col<cols;col++){
+        for (int row = 0; row < rows; row++) {
+            for (int col = 0; col < cols; col++) {
                 System.out.printf("%2d\t", matrix[row][col]);
             }
             System.out.println();
@@ -45,9 +45,9 @@ public class ArrayProblems {
         System.out.println();
     }
 
-    public void print(List<Integer> array) {
-        for (int datum : array)
-            System.out.printf("%2d\t", datum);
+    public void print(List<?> array) {
+        for (Object datum : array)
+            System.out.printf("%s  ", datum);
         System.out.println();
     }
 
@@ -182,20 +182,20 @@ public class ArrayProblems {
         return new ArrayList<>(s);
     }
 
-    public boolean rotateMatrixClockwise(int[][] matrix){
-        System.out.printf("matrix length: %d\n",matrix.length);
-        if (matrix.length==0 || matrix[0].length!=matrix.length)
+    public boolean rotateMatrixClockwise(int[][] matrix) {
+        System.out.printf("matrix length: %d\n", matrix.length);
+        if (matrix.length == 0 || matrix[0].length != matrix.length)
             return false;
         int n = matrix.length;
-        for (int layer=0;layer<n/2;layer++){
+        for (int layer = 0; layer < n / 2; layer++) {
             int first = layer;
-            int last = n-1-layer;
-            for (int i=first;i<last;i++){
-                int offset = i-first;
+            int last = n - 1 - layer;
+            for (int i = first; i < last; i++) {
+                int offset = i - first;
                 int top = matrix[first][i];
-                matrix[first][i] = matrix[last-offset][first];
-                matrix[last-offset][first] = matrix[last][last-offset];
-                matrix[last][last-offset] = matrix[i][last];
+                matrix[first][i] = matrix[last - offset][first];
+                matrix[last - offset][first] = matrix[last][last - offset];
+                matrix[last][last - offset] = matrix[i][last];
                 matrix[i][last] = top;
                 print(matrix);
             }

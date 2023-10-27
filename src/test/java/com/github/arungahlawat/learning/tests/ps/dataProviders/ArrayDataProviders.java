@@ -151,6 +151,20 @@ public class ArrayDataProviders {
         };
     }
 
+    @DataProvider(name = "LetterCombinationOfANumberTestData")
+    public Object[] getLetterCombinationOfANumberTestData() {
+        return new Object[]{
+                "234",
+                "23",
+                "2",
+                "",
+                "2345",
+                "79",
+                "798",
+                "7985"
+        };
+    }
+
     @DataProvider(name = "LongestCommonPrefixTestData")
     public Object[] getLongestCommonPrefixTestDataTestData() {
         return new Object[][]{
