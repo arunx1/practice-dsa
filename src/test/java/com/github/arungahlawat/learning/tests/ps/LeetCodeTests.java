@@ -1,7 +1,7 @@
 package com.github.arungahlawat.learning.tests.ps;
 
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
-import com.github.arungahlawat.learning.dataStructures.Node;
+import com.github.arungahlawat.learning.dataStructures.ListNode;
 import com.github.arungahlawat.learning.ps.ArrayProblems;
 import com.github.arungahlawat.learning.ps.leetCode.*;
 import org.testng.annotations.BeforeMethod;
@@ -100,7 +100,7 @@ public class LeetCodeTests {
         System.out.print("Second list: ");
         secondLinkedList.print();
         P_02_AddTwoNumbers p02AddTwoNumbers = new P_02_AddTwoNumbers();
-        Node result = p02AddTwoNumbers.addTwoNumbers(firstLinkedList.getHead(), secondLinkedList.getHead());
+        ListNode result = p02AddTwoNumbers.addTwoNumbers(firstLinkedList.getHead(), secondLinkedList.getHead());
         System.out.print("Result list: ");
         LinkedList resultList = new LinkedList();
         resultList.setHead(result);
@@ -318,5 +318,22 @@ public class LeetCodeTests {
         List<List<Integer>> result = p18FourSum.fourSum(nums, target);
         System.out.printf("Four sum items for %d are : \n", target);
         arrayProblems.printListOfList(result);
+    }
+
+    @Test(description = "19 Remove Nth Node From End of List",
+            dataProvider = "RemoveNthNodeTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC19", "Linked Lists", "Remove Nth Node From End of List"})
+    public void removeNthNode(int[] list, int n) {
+        LinkedList linkedList = new LinkedList(list);
+        System.out.print("First list: ");
+        linkedList.print();
+        System.out.printf("Node index from last which is to be removed: %d\n", n);
+        P_19_RemoveNthNode p19RemoveNthNode = new P_19_RemoveNthNode();
+        ListNode result = p19RemoveNthNode.removeNthFromEnd(linkedList.getHead(), n);
+        System.out.print("List after removal:");
+        linkedList.setHead(result);
+        linkedList.print();
     }
 }
