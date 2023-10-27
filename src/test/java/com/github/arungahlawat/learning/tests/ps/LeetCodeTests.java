@@ -336,4 +336,16 @@ public class LeetCodeTests {
         linkedList.setHead(result);
         linkedList.print();
     }
+
+    @Test(description = "20 Valid Parentheses",
+            dataProvider = "ValidParenthesesTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC20", "Strings", "Valid Parentheses"})
+    public void validIfInputHasValidParentheses(String s) {
+        P_20_Valid_Parentheses p20ValidParentheses = new P_20_Valid_Parentheses();
+        System.out.printf("Input strings: %s\n", s);
+        Boolean isValid = p20ValidParentheses.isValid(s);
+        System.out.printf("Input has valid parentheses? : %s\n", isValid);
+    }
 }
