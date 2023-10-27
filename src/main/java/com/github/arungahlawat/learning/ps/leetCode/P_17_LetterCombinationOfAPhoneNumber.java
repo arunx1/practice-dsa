@@ -23,7 +23,7 @@ Constraints:
     * 0 <= digits.length <= 4
     * digits[i] is a digit in the range ['2', '9'].
  */
-public class P_19_LetterCombinationOfAPhoneNumber {
+public class P_17_LetterCombinationOfAPhoneNumber {
     Map<Character, String> keyDigitMap = new HashMap<Character, String>() {{
         put('2', "a,b,c");
         put('3', "d,e,f");

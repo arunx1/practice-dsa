@@ -47,7 +47,7 @@ public class ArrayProblems {
 
     public void print(List<?> array) {
         for (Object datum : array)
-            System.out.printf("%s  ", datum);
+            System.out.printf("%2s  ", datum);
         System.out.println();
     }
 
