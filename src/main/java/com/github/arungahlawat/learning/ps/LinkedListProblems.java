@@ -1,21 +1,21 @@
 package com.github.arungahlawat.learning.ps;
 
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
-import com.github.arungahlawat.learning.dataStructures.Node;
+import com.github.arungahlawat.learning.dataStructures.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;
 
 public class LinkedListProblems {
     public void removeDuplicates(LinkedList linkedList) {
-        Node currentNode = linkedList.getHead();
+        ListNode currentNode = linkedList.getHead();
         if (currentNode == null || currentNode.next == null)
             return;
         while (currentNode != null && currentNode.next != null) {
-            Node previousPointer = currentNode;
-            Node pointer = currentNode.next;
+            ListNode previousPointer = currentNode;
+            ListNode pointer = currentNode.next;
             while (pointer != null) {
-                if (currentNode.data == pointer.data) {
+                if (currentNode.val == pointer.val) {
                     previousPointer.next = pointer.next;
                 } else {
                     previousPointer = pointer;
@@ -27,14 +27,14 @@ public class LinkedListProblems {
     }
 
     public void removeDuplicatesUsingBuffer(LinkedList linkedList) {
-        Node currentNode = linkedList.getHead();
-        Node previousNode = null;
+        ListNode currentNode = linkedList.getHead();
+        ListNode previousNode = null;
         Set<Integer> uniqueNodeData = new HashSet<>();
         while (currentNode != null) {
-            if (uniqueNodeData.contains(currentNode.data)) {
+            if (uniqueNodeData.contains(currentNode.val)) {
                 previousNode.next = currentNode.next;
             } else {
-                uniqueNodeData.add(currentNode.data);
+                uniqueNodeData.add(currentNode.val);
                 previousNode = currentNode;
             }
             currentNode = currentNode.next;
@@ -42,18 +42,18 @@ public class LinkedListProblems {
     }
 
     public void reverse(LinkedList linkedList){
-        Node head = linkedList.getHead();
+        ListNode head = linkedList.getHead();
         head = reverse(head);
         linkedList.setHead(head);
     }
 
-    public Node reverse(Node head){
+    public ListNode reverse(ListNode head){
         if (head == null)
             return head;
-        Node prev = null;
-        Node current = head;
+        ListNode prev = null;
+        ListNode current = head;
         while (current!=null){
-            Node temp = current.next;
+            ListNode temp = current.next;
             current.next=prev;
             prev=current;
             current = temp;

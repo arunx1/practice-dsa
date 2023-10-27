@@ -2,7 +2,6 @@ package com.github.arungahlawat.learning.ps.leetCode;
 
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
 import com.github.arungahlawat.learning.dataStructures.ListNode;
-import com.github.arungahlawat.learning.dataStructures.Node;
 import com.github.arungahlawat.learning.ps.LinkedListProblems;
 
 /*
@@ -40,11 +39,11 @@ public class P_02_AddTwoNumbers {
         linkedListProblems.reverse(second);
         LinkedList result = new LinkedList();
         int carry = 0;
-        Node firstListCurrentNode = first.getHead();
-        Node secondListCurrentNode = second.getHead();
+        ListNode firstListCurrentNode = first.getHead();
+        ListNode secondListCurrentNode = second.getHead();
         while (firstListCurrentNode != null || secondListCurrentNode != null) {
-            int firstDigit = firstListCurrentNode == null ? 0 : firstListCurrentNode.data;
-            int secondDigit = secondListCurrentNode == null ? 0 : secondListCurrentNode.data;
+            int firstDigit = firstListCurrentNode == null ? 0 : firstListCurrentNode.val;
+            int secondDigit = secondListCurrentNode == null ? 0 : secondListCurrentNode.val;
             int realSum = firstDigit + secondDigit + carry;
             result.add(realSum % 10);
             carry = realSum / 10;
@@ -59,18 +58,18 @@ public class P_02_AddTwoNumbers {
         return result;
     }
 
-    public Node addTwoNumbers(Node firstListCurrentNode, Node secondListCurrentNode) {
+    public ListNode addTwoNumbers1(ListNode firstListCurrentNode, ListNode secondListCurrentNode) {
         LinkedListProblems linkedListProblems = new LinkedListProblems();
         firstListCurrentNode = linkedListProblems.reverse(firstListCurrentNode);
         secondListCurrentNode = linkedListProblems.reverse(secondListCurrentNode);
-        Node resultHead = null;
-        Node resultCurrent = null;
+        ListNode resultHead = null;
+        ListNode resultCurrent = null;
         int carry = 0;
         while (firstListCurrentNode != null || secondListCurrentNode != null) {
-            int firstDigit = firstListCurrentNode == null ? 0 : firstListCurrentNode.data;
-            int secondDigit = secondListCurrentNode == null ? 0 : secondListCurrentNode.data;
+            int firstDigit = firstListCurrentNode == null ? 0 : firstListCurrentNode.val;
+            int secondDigit = secondListCurrentNode == null ? 0 : secondListCurrentNode.val;
             int realSum = firstDigit + secondDigit + carry;
-            Node temp = new Node(realSum % 10);
+            ListNode temp = new ListNode(realSum % 10);
             if (resultHead == null) {
                 resultHead = temp;
                 resultCurrent = resultHead;
@@ -86,7 +85,7 @@ public class P_02_AddTwoNumbers {
         }
 
         if (carry != 0) {
-            resultCurrent.next = new Node(carry);
+            resultCurrent.next = new ListNode(carry);
         }
         return resultHead;
     }
