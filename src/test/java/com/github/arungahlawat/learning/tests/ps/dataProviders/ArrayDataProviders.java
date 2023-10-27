@@ -192,4 +192,16 @@ public class ArrayDataProviders {
                 {new int[]{0, 0, 0}, 0},
         };
     }
+
+    @DataProvider(name = "FourSumTestData")
+    public Object[] getFourSumTestData() {
+        return new Object[][]{
+                {new int[]{1, 0, -1, 0, -2, 2}, 0},
+                {new int[]{2, 2, 2, 2, 2}, 8},
+                {new int[]{0, 0, 0}, 0},
+                {new int[]{0, 0, 0, 0}, 0},
+                {new int[]{-2, -5, -6, 0, 2, 4, 6, 1, 12, 3, 9, 2, 8, 1}, 8},
+                {new int[]{1000000000, 1000000000, 1000000000, 1000000000}, -294967296},
+        };
+    }
 }

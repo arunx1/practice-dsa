@@ -290,17 +290,33 @@ public class LeetCodeTests {
         System.out.printf("Three sum closest to %d is : %d\n", target, closestSum);
     }
 
-    @Test(description = "19 Letter combination of a phone number : return list of letter combinations",
+    @Test(description = "17 Letter combination of a phone number : return list of letter combinations",
             dataProvider = "LetterCombinationOfANumberTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
             threadPoolSize = 10,
-            groups = {"LC19", "Strings", "Letter combination of a phone number"})
+            groups = {"LC17", "Strings", "Letter combination of a phone number"})
     public void findLetterCombinationOfANumber(String digits) {
-        P_19_LetterCombinationOfAPhoneNumber p19LetterCombinationOfAPhoneNumber = new P_19_LetterCombinationOfAPhoneNumber();
+        P_17_LetterCombinationOfAPhoneNumber p17LetterCombinationOfAPhoneNumber = new P_17_LetterCombinationOfAPhoneNumber();
         ArrayProblems arrayProblems = new ArrayProblems();
-        System.out.printf("Input strings: %s\n",digits);
-        List<String> combinations = p19LetterCombinationOfAPhoneNumber.letterCombinations(digits);
+        System.out.printf("Input strings: %s\n", digits);
+        List<String> combinations = p17LetterCombinationOfAPhoneNumber.letterCombinations(digits);
         System.out.println("Combinations:");
         arrayProblems.print(combinations);
+    }
+
+    @Test(description = "18 Four Sum : Find quadruplets with sum equal to target",
+            dataProvider = "FourSumTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC18", "Arrays", "Four Sum"})
+    public void findQuadrupletsWithSumEqualToTarget(int[] nums, int target) {
+        P_18_FourSum p18FourSum = new P_18_FourSum();
+        ArrayProblems arrayProblems = new ArrayProblems();
+        System.out.print("Input array : ");
+        arrayProblems.print(nums);
+        System.out.printf("Target: %d\n", target);
+        List<List<Integer>> result = p18FourSum.fourSum(nums, target);
+        System.out.printf("Four sum items for %d are : \n", target);
+        arrayProblems.printListOfList(result);
     }
 }
