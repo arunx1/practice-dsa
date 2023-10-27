@@ -348,4 +348,24 @@ public class LeetCodeTests {
         Boolean isValid = p20ValidParentheses.isValid(s);
         System.out.printf("Input has valid parentheses? : %s\n", isValid);
     }
+
+    @Test(description = "21 Merge Two Sorted Lists",
+            dataProvider = "MergeTwoSortedListsTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC21", "Linked Lists", "Merge Two Sorted Lists"})
+    public void mergeTwoSortedLists(int[] first, int[] second) {
+        LinkedList firstLinkedList = new LinkedList(first);
+        System.out.print("First list: ");
+        firstLinkedList.print();
+        LinkedList secondLinkedList = new LinkedList(second);
+        System.out.print("Second list: ");
+        secondLinkedList.print();
+        P_21_Merge_Two_Sorted_List p21MergeTwoSortedList = new P_21_Merge_Two_Sorted_List();
+        ListNode result = p21MergeTwoSortedList.mergeTwoLists(firstLinkedList.getHead(), secondLinkedList.getHead());
+        System.out.print("Result list: ");
+        LinkedList resultList = new LinkedList();
+        resultList.setHead(result);
+        resultList.print();
+    }
 }
