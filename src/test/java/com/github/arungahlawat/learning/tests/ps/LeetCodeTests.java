@@ -368,4 +368,25 @@ public class LeetCodeTests {
         resultList.setHead(result);
         resultList.print();
     }
+
+    @Test(description = "23 Merge k Sorted Lists",
+            dataProvider = "MergeKSortedListsTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC23", "Linked Lists", "Merge K Sorted Lists"})
+    public void mergeKSortedLists(int[]... lists) {
+        ListNode[] listHeads = new ListNode[lists.length];
+        for (int i = 0; i < lists.length; i++) {
+            LinkedList linkedList = new LinkedList(lists[i]);
+            listHeads[i] = linkedList.getHead();
+            System.out.printf("List %d : ", i+1);
+            linkedList.print();
+        }
+        P_23_MergeKSortedLists p23MergeKSortedLists = new P_23_MergeKSortedLists();
+        ListNode result = p23MergeKSortedLists.mergeKLists(listHeads);
+        System.out.print("Result list: ");
+        LinkedList resultList = new LinkedList();
+        resultList.setHead(result);
+        resultList.print();
+    }
 }
