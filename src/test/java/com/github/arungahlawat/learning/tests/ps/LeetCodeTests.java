@@ -420,4 +420,19 @@ public class LeetCodeTests {
         System.out.print("Array after removing duplicates: ");
         arrayProblems.print(nums, length);
     }
+
+    @Test(description = "27 Remove all occurrences of val from array",
+            dataProvider = "RemoveElementTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC27", "Arrays", "Remove Element"})
+    public void removeAllOccurrencesOfElement(int[] nums, int val) {
+        P_27_RemoveAllOccurrences p27RemoveAllOccurrences = new P_27_RemoveAllOccurrences();
+        ArrayProblems arrayProblems = new ArrayProblems();
+        System.out.printf("Val: %d, Input array: ", val);
+        arrayProblems.print(nums);
+        int length = p27RemoveAllOccurrences.removeElement(nums, val);
+        System.out.print("Array after removing occurrences: ");
+        arrayProblems.print(nums, length);
+    }
 }
