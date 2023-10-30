@@ -276,4 +276,19 @@ public class ArrayDataProviders {
                 {new int[]{-100, -100, -100, -100, -99, -98, -97, 97, 98, 99, 100, 100, 100}},
         };
     }
+
+    @DataProvider(name = "RemoveElementTestData")
+    public Object[][] getRemoveElementTestData() {
+        return new Object[][]{
+                {new int[]{}, 0},
+                {new int[]{1}, 1},
+                {new int[]{1}, 2},
+                {new int[]{1, 1, 2}, 1},
+                {new int[]{1, 2, 3}, 0},
+                {new int[]{1, 2, 2, 3}, 1},
+                {new int[]{1, 2, 2, 3, 3}, 2},
+                {new int[]{1, 1, 1, 1}, 1},
+                {new int[]{-100, -100, -100, -100, -99, -98, -97, 97, 98, 99, 100, 100, 100}, -97},
+        };
+    }
 }
