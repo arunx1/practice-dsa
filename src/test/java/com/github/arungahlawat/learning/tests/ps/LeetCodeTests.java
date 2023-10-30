@@ -405,4 +405,19 @@ public class LeetCodeTests {
         linkedList.setHead(result);
         linkedList.print();
     }
+
+    @Test(description = "26 Remove Duplicates from Sorted Array",
+            dataProvider = "RemoveDuplicatesFromSortedArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"LC26", "Arrays", "Remove Duplicates from Sorted Array"})
+    public void removeDuplicatesFromSortedArray(int[] nums) {
+        P_26_RemoveDuplicatesFromSortedArray p26RemoveDuplicatesFromSortedArray = new P_26_RemoveDuplicatesFromSortedArray();
+        ArrayProblems arrayProblems = new ArrayProblems();
+        System.out.print("Input array: ");
+        arrayProblems.print(nums);
+        int length = p26RemoveDuplicatesFromSortedArray.removeDuplicates(nums);
+        System.out.print("Array after removing duplicates: ");
+        arrayProblems.print(nums, length);
+    }
 }

@@ -262,4 +262,18 @@ public class ArrayDataProviders {
                 new int[]{1, 2},
         };
     }
+
+    @DataProvider(name = "RemoveDuplicatesFromSortedArrayTestData")
+    public Object[][] getRemoveDuplicatesFromSortedArrayTestData() {
+        return new Object[][]{
+                {new int[]{}},
+                {new int[]{1}},
+                {new int[]{1, 1, 2}},
+                {new int[]{1, 2, 3}},
+                {new int[]{1, 2, 2, 3}},
+                {new int[]{1, 2, 2, 3, 3}},
+                {new int[]{1, 1, 1, 1}},
+                {new int[]{-100, -100, -100, -100, -99, -98, -97, 97, 98, 99, 100, 100, 100}},
+        };
+    }
 }
