@@ -23,6 +23,15 @@ public class ArrayProblems {
         System.out.println();
     }
 
+    public void print(int[] array, int length) {
+        for (int datum : array) {
+            System.out.printf("%2d  ", datum);
+            if (length-- <= 1)
+                break;
+        }
+        System.out.println();
+    }
+
     public void print(String[] array) {
         for (String datum : array)
             System.out.printf("%s  ", datum);
