@@ -72,18 +72,10 @@ public class ArrayQueue {
             System.out.printf("Queue is empty. Front: %2d | Rear: %2d | Capacity: %2d\n", this.front, this.rear, this.capacity);
             return;
         }
-        int pointer = this.front;
-        if (this.front > this.rear) {
-            while (pointer < this.capacity + this.rear + 1) {
-                System.out.printf("%2d  ", this.array[pointer % this.capacity]);
-                pointer++;
-            }
-        } else
-            while (pointer <= this.rear) {
-                System.out.printf("%2d  ", this.array[pointer % this.capacity]);
-                pointer++;
-            }
-        System.out.printf("Front: %2d | Rear: %2d | Capacity: %2d", front, rear, capacity);
+        for (int i = this.front; i < (this.front > this.rear ? this.rear + this.capacity : this.rear) + 1; i++){
+            System.out.printf("%2d  ", this.array[i % this.capacity]);
+        }
+        System.out.printf("Front: %2d | Rear: %2d | Capacity: %2d", this.front, this.rear, this.capacity);
         System.out.println();
     }
 }
