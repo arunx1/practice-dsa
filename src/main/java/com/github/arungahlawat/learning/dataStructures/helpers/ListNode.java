@@ -1,4 +1,4 @@
-package com.github.arungahlawat.learning.dataStructures;
+package com.github.arungahlawat.learning.dataStructures.helpers;
 
 public class ListNode {
     public int val;

@@ -1,5 +1,7 @@
 package com.github.arungahlawat.learning.dataStructures;
 
+import com.github.arungahlawat.learning.dataStructures.helpers.QueueNode;
+
 public class Queue<T> {
     private QueueNode<T> first;
     private QueueNode<T> last;

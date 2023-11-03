@@ -6,7 +6,6 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class StringProblems {
-
     // To determine if all chars in string are unique. Assuming input can consist any of 128 ASCII chars
     public boolean isUnique(String input) {
         if (input.length() > 128)

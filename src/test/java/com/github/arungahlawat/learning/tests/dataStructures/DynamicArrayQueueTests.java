@@ -4,7 +4,6 @@ import com.github.arungahlawat.learning.dataStructures.DynamicArrayQueue;
 import org.testng.annotations.Test;
 
 public class DynamicArrayQueueTests {
-
     @Test(description = "Verify creating dynamic array queue")
     void verifyCreatingArrayQueue() {
         DynamicArrayQueue dynamicArrayQueue = new DynamicArrayQueue();

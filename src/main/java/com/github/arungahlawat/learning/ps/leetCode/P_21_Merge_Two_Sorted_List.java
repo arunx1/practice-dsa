@@ -1,6 +1,6 @@
 package com.github.arungahlawat.learning.ps.leetCode;
 
-import com.github.arungahlawat.learning.dataStructures.ListNode;
+import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
 
 /*
 You are given the heads of two sorted linked lists list1 and list2.

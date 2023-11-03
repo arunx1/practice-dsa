@@ -1,8 +1,8 @@
 package com.github.arungahlawat.learning.ps.leetCode;
 
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
-import com.github.arungahlawat.learning.dataStructures.ListNode;
-import com.github.arungahlawat.learning.ps.LinkedListProblems;
+import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
+import com.github.arungahlawat.learning.ps.leetCode.helpers.LinkedListUtils;
 
 /*
 You are given two non-empty linked lists representing two non-negative integers.
@@ -34,9 +34,9 @@ Constraints:
 */
 public class P_02_AddTwoNumbers {
     public LinkedList addTwoNumbers(LinkedList first, LinkedList second) {
-        LinkedListProblems linkedListProblems = new LinkedListProblems();
-        linkedListProblems.reverse(first);
-        linkedListProblems.reverse(second);
+        LinkedListUtils linkedListUtils = new LinkedListUtils();
+        linkedListUtils.reverse(first);
+        linkedListUtils.reverse(second);
         LinkedList result = new LinkedList();
         int carry = 0;
         ListNode firstListCurrentNode = first.getHead();
@@ -59,9 +59,9 @@ public class P_02_AddTwoNumbers {
     }
 
     public ListNode addTwoNumbers1(ListNode firstListCurrentNode, ListNode secondListCurrentNode) {
-        LinkedListProblems linkedListProblems = new LinkedListProblems();
-        firstListCurrentNode = linkedListProblems.reverse(firstListCurrentNode);
-        secondListCurrentNode = linkedListProblems.reverse(secondListCurrentNode);
+        LinkedListUtils linkedListUtils = new LinkedListUtils();
+        firstListCurrentNode = linkedListUtils.reverse(firstListCurrentNode);
+        secondListCurrentNode = linkedListUtils.reverse(secondListCurrentNode);
         ListNode resultHead = null;
         ListNode resultCurrent = null;
         int carry = 0;

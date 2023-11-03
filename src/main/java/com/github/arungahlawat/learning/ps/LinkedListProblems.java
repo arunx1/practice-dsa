@@ -1,7 +1,7 @@
 package com.github.arungahlawat.learning.ps;
 
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
-import com.github.arungahlawat.learning.dataStructures.ListNode;
+import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
 
 import java.util.HashSet;
 import java.util.Set;

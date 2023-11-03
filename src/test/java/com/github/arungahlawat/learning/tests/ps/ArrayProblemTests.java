@@ -6,12 +6,11 @@ import org.testng.annotations.Test;
 import java.util.List;
 
 public class ArrayProblemTests {
-
     @Test(description = "Verify moving all 0's to end of array")
     public void verifyMovingAll0ToEnd() {
         ArrayProblems arrayProblems = new ArrayProblems(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 4, 1, 0, 1, 9, 2, 3, 4);
         arrayProblems.moveAllKsToEndOfArray(1);
-        arrayProblems.print();
+        arrayProblems.print(arrayProblems.data);
     }
 
     @Test(description = "Verify finding two sum")

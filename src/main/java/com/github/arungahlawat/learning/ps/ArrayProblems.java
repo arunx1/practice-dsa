@@ -1,69 +1,15 @@
 package com.github.arungahlawat.learning.ps;
 
+import com.github.arungahlawat.learning.ps.leetCode.helpers.ArrayUtils;
 import com.github.arungahlawat.learning.sorting.QuickSort;
 
 import java.util.*;
 
-public class ArrayProblems {
-    int[] data;
+public class ArrayProblems extends ArrayUtils {
+    public int[] data;
 
     public ArrayProblems(int... data) {
         this.data = data;
-    }
-
-    public void print() {
-        for (int datum : data)
-            System.out.printf("%2d\t", datum);
-        System.out.println();
-    }
-
-    public void print(int[] array) {
-        for (int datum : array)
-            System.out.printf("%2d  ", datum);
-        System.out.println();
-    }
-
-    public void print(int[] array, int length) {
-        for (int datum : array) {
-            System.out.printf("%2d  ", datum);
-            if (length-- <= 1)
-                break;
-        }
-        System.out.println();
-    }
-
-    public void print(String[] array) {
-        for (String datum : array)
-            System.out.printf("%s  ", datum);
-        System.out.println();
-    }
-
-    public void print(int[][] matrix) {
-        int rows = matrix.length;
-        if (rows == 0)
-            return;
-        int cols = matrix[0].length;
-        if (cols == 0)
-            return;
-        for (int row = 0; row < rows; row++) {
-            for (int col = 0; col < cols; col++) {
-                System.out.printf("%2d\t", matrix[row][col]);
-            }
-            System.out.println();
-        }
-        System.out.println();
-    }
-
-    public void print(List<?> array) {
-        for (Object datum : array)
-            System.out.printf("%2s  ", datum);
-        System.out.println();
-    }
-
-    public void printListOfList(List<List<Integer>> array) {
-        for (List<Integer> arrayList : array) {
-            print(arrayList);
-        }
     }
 
     private void swap(int[] arr, int i, int j) {
@@ -191,10 +137,10 @@ public class ArrayProblems {
         return new ArrayList<>(s);
     }
 
-    public boolean rotateMatrixClockwise(int[][] matrix) {
+    public void rotateMatrixClockwise(int[][] matrix) {
         System.out.printf("matrix length: %d\n", matrix.length);
         if (matrix.length == 0 || matrix[0].length != matrix.length)
-            return false;
+            return;
         int n = matrix.length;
         for (int layer = 0; layer < n / 2; layer++) {
             int first = layer;
@@ -209,6 +155,5 @@ public class ArrayProblems {
                 print(matrix);
             }
         }
-        return true;
     }
 }

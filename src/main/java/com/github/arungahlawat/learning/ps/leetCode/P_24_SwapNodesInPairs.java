@@ -1,6 +1,6 @@
 package com.github.arungahlawat.learning.ps.leetCode;
 
-import com.github.arungahlawat.learning.dataStructures.ListNode;
+import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
 
 /*
 Given a linked list, swap every two adjacent nodes and return its head.
