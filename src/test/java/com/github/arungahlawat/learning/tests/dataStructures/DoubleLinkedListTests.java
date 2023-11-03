@@ -1,6 +1,6 @@
 package com.github.arungahlawat.learning.tests.dataStructures;
 
-import com.github.arungahlawat.learning.dataStructures.TwoWayNode;
+import com.github.arungahlawat.learning.dataStructures.helpers.TwoWayNode;
 
 import java.util.NoSuchElementException;
 import java.util.Scanner;

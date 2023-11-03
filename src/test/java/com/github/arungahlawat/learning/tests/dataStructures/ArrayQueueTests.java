@@ -4,7 +4,6 @@ import com.github.arungahlawat.learning.dataStructures.ArrayQueue;
 import org.testng.annotations.Test;
 
 public class ArrayQueueTests {
-
     @Test(description = "Verify creating array queue")
     void verifyCreatingArrayQueue() {
         ArrayQueue arrayQueue = new ArrayQueue(10);

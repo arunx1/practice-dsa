@@ -1,6 +1,6 @@
 package com.github.arungahlawat.learning.ps.leetCode;
 
-import com.github.arungahlawat.learning.dataStructures.ListNode;
+import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
 
 /*
 You are given an array of k linked-lists lists, each linked-list is sorted in ascending order.

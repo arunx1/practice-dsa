@@ -1,5 +1,7 @@
 package com.github.arungahlawat.learning.dataStructures;
 
+import com.github.arungahlawat.learning.dataStructures.helpers.GraphNode;
+
 import java.util.ArrayList;
 import java.util.List;
 

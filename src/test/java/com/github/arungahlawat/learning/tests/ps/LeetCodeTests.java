@@ -1,8 +1,8 @@
 package com.github.arungahlawat.learning.tests.ps;
 
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
-import com.github.arungahlawat.learning.dataStructures.ListNode;
-import com.github.arungahlawat.learning.ps.ArrayProblems;
+import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
+import com.github.arungahlawat.learning.ps.leetCode.helpers.ArrayUtils;
 import com.github.arungahlawat.learning.ps.leetCode.*;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -21,15 +21,15 @@ public class LeetCodeTests {
             threadPoolSize = 10,
             groups = {"LC01", "Arrays", "Two Sum"})
     public void findTwoSumUsingBruitForce(int[] nums, int target) {
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("Input array: ");
-        arrayProblems.print(nums);
+        arrayUtils.print(nums);
         System.out.printf("Target: %d\n", target);
         P_01_TwoSum p01TwoSum = new P_01_TwoSum();
         int[] twoSum = p01TwoSum.findTwoSumUsingBruitForce(nums, target);
         if (twoSum.length == 2) {
             System.out.print("Result indices: ");
-            arrayProblems.print(twoSum);
+            arrayUtils.print(twoSum);
         }
     }
 
@@ -39,15 +39,15 @@ public class LeetCodeTests {
             threadPoolSize = 10,
             groups = {"LC01", "Arrays", "Two Sum"})
     public void findTwoSumUsingTwoPointersInSortedArray(int[] nums, int target) {
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("Input array: ");
-        arrayProblems.print(nums);
+        arrayUtils.print(nums);
         System.out.printf("Target: %d\n", target);
         P_01_TwoSum p01TwoSum = new P_01_TwoSum();
         int[] twoSum = p01TwoSum.findTwoSumUsingTwoPointersOnSortedArray(nums, target);
         if (twoSum.length == 2) {
             System.out.print("Result : ");
-            arrayProblems.print(twoSum);
+            arrayUtils.print(twoSum);
         }
     }
 
@@ -57,15 +57,15 @@ public class LeetCodeTests {
             threadPoolSize = 10,
             groups = {"LC01", "Arrays", "Two Sum"})
     public void findTwoSumUsingHashtable(int[] nums, int target) {
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("Input array: ");
-        arrayProblems.print(nums);
+        arrayUtils.print(nums);
         System.out.printf("Target: %d\n", target);
         P_01_TwoSum p01TwoSum = new P_01_TwoSum();
         int[] twoSum = p01TwoSum.findTwoSumUsingHashTable(nums, target);
         if (twoSum.length == 2) {
             System.out.print("Result indices: ");
-            arrayProblems.print(twoSum);
+            arrayUtils.print(twoSum);
         }
     }
 
@@ -138,11 +138,11 @@ public class LeetCodeTests {
             groups = {"LC04", "Strings", "Median of Two Sorted Arrays"})
     public void findMedianOfTwoSortedArrays(int[] nums1, int[] nums2) {
         P_04_MedianOfTwoSortedArrays p_04_medianOfTwoSortedArrays = new P_04_MedianOfTwoSortedArrays();
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("First array:");
-        arrayProblems.print(nums1);
+        arrayUtils.print(nums1);
         System.out.print("Second array:");
-        arrayProblems.print(nums2);
+        arrayUtils.print(nums2);
         double median = p_04_medianOfTwoSortedArrays.findMedianSortedArrays(nums1, nums2);
         System.out.printf("Median: %2f\n", median);
     }
@@ -215,9 +215,9 @@ public class LeetCodeTests {
             groups = {"LC11", "Arrays", "Container With Most Water"})
     public void getContainerWithMaxArea(int[] height) {
         P_11_ContainerWithMostWater p11ContainerWithMostWater = new P_11_ContainerWithMostWater();
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("Input height array : ");
-        arrayProblems.print(height);
+        arrayUtils.print(height);
         int maxArea = p11ContainerWithMostWater.maxArea(height);
         System.out.printf("Container area with max water : %d\n", maxArea);
     }
@@ -253,9 +253,9 @@ public class LeetCodeTests {
             groups = {"LC14", "Strings", "Longest Common Prefix"})
     public void findLongestCommonPrefix(String[] strs) {
         P_14_LongestCommonPrefix p14LongestCommonPrefix = new P_14_LongestCommonPrefix();
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("Input strings: ");
-        arrayProblems.print(strs);
+        arrayUtils.print(strs);
         String commonPrefix = p14LongestCommonPrefix.longestCommonPrefix(strs);
         System.out.printf("Longest common prefix is: '%s'\n", commonPrefix);
     }
@@ -267,12 +267,12 @@ public class LeetCodeTests {
             groups = {"LC15", "Arrays", "Three Sum"})
     public void findTripletsWithSumEqualToZero(int[] nums) {
         P_15_ThreeSum p15ThreeSum = new P_15_ThreeSum();
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("Input array : ");
-        arrayProblems.print(nums);
+        arrayUtils.print(nums);
         List<List<Integer>> result = p15ThreeSum.threeSum(nums);
         System.out.printf("Three sum indices for %d are : \n", 0);
-        arrayProblems.printListOfList(result);
+        arrayUtils.printListOfList(result);
     }
 
     @Test(description = "16 Three Sum closest : Find the closest triplet sum to target",
@@ -282,9 +282,9 @@ public class LeetCodeTests {
             groups = {"LC16", "Arrays", "Three Sum Closest"})
     public void findTripletsWithSumClosestToTarget(int[] nums, int target) {
         P_16_ThreeSumClosest p16ThreeSumClosest = new P_16_ThreeSumClosest();
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("Input array : ");
-        arrayProblems.print(nums);
+        arrayUtils.print(nums);
         System.out.printf("Target: %d\n", target);
         int closestSum = p16ThreeSumClosest.threeSumClosest(nums, target);
         System.out.printf("Three sum closest to %d is : %d\n", target, closestSum);
@@ -297,11 +297,11 @@ public class LeetCodeTests {
             groups = {"LC17", "Strings", "Letter combination of a phone number"})
     public void findLetterCombinationOfANumber(String digits) {
         P_17_LetterCombinationOfAPhoneNumber p17LetterCombinationOfAPhoneNumber = new P_17_LetterCombinationOfAPhoneNumber();
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.printf("Input strings: %s\n", digits);
         List<String> combinations = p17LetterCombinationOfAPhoneNumber.letterCombinations(digits);
         System.out.println("Combinations:");
-        arrayProblems.print(combinations);
+        arrayUtils.print(combinations);
     }
 
     @Test(description = "18 Four Sum : Find quadruplets with sum equal to target",
@@ -311,13 +311,13 @@ public class LeetCodeTests {
             groups = {"LC18", "Arrays", "Four Sum"})
     public void findQuadrupletsWithSumEqualToTarget(int[] nums, int target) {
         P_18_FourSum p18FourSum = new P_18_FourSum();
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("Input array : ");
-        arrayProblems.print(nums);
+        arrayUtils.print(nums);
         System.out.printf("Target: %d\n", target);
         List<List<Integer>> result = p18FourSum.fourSum(nums, target);
         System.out.printf("Four sum items for %d are : \n", target);
-        arrayProblems.printListOfList(result);
+        arrayUtils.printListOfList(result);
     }
 
     @Test(description = "19 Remove Nth Node From End of List",
@@ -413,12 +413,12 @@ public class LeetCodeTests {
             groups = {"LC26", "Arrays", "Remove Duplicates from Sorted Array"})
     public void removeDuplicatesFromSortedArray(int[] nums) {
         P_26_RemoveDuplicatesFromSortedArray p26RemoveDuplicatesFromSortedArray = new P_26_RemoveDuplicatesFromSortedArray();
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("Input array: ");
-        arrayProblems.print(nums);
+        arrayUtils.print(nums);
         int length = p26RemoveDuplicatesFromSortedArray.removeDuplicates(nums);
         System.out.print("Array after removing duplicates: ");
-        arrayProblems.print(nums, length);
+        arrayUtils.print(nums, length);
     }
 
     @Test(description = "27 Remove all occurrences of val from array",
@@ -428,11 +428,11 @@ public class LeetCodeTests {
             groups = {"LC27", "Arrays", "Remove Element"})
     public void removeAllOccurrencesOfElement(int[] nums, int val) {
         P_27_RemoveAllOccurrences p27RemoveAllOccurrences = new P_27_RemoveAllOccurrences();
-        ArrayProblems arrayProblems = new ArrayProblems();
+        ArrayUtils arrayUtils = new ArrayUtils();
         System.out.printf("Val: %d, Input array: ", val);
-        arrayProblems.print(nums);
+        arrayUtils.print(nums);
         int length = p27RemoveAllOccurrences.removeElement(nums, val);
         System.out.print("Array after removing occurrences: ");
-        arrayProblems.print(nums, length);
+        arrayUtils.print(nums, length);
     }
 }

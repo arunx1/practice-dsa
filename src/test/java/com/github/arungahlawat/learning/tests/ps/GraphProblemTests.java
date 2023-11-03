@@ -1,7 +1,7 @@
 package com.github.arungahlawat.learning.tests.ps;
 
 import com.github.arungahlawat.learning.dataStructures.Graph;
-import com.github.arungahlawat.learning.dataStructures.GraphNode;
+import com.github.arungahlawat.learning.dataStructures.helpers.GraphNode;
 import com.github.arungahlawat.learning.ps.GraphProblems;
 import org.testng.annotations.Test;
 

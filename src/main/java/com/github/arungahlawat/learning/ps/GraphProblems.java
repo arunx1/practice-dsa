@@ -1,11 +1,10 @@
 package com.github.arungahlawat.learning.ps;
 
 import com.github.arungahlawat.learning.dataStructures.Graph;
-import com.github.arungahlawat.learning.dataStructures.GraphNode;
+import com.github.arungahlawat.learning.dataStructures.helpers.GraphNode;
 import com.github.arungahlawat.learning.dataStructures.Queue;
 
 public class GraphProblems extends Graph {
-
     public boolean pathBetweenNodesExistUsingBreadthFirstSearch(Graph graph, GraphNode startNode, GraphNode endNode) {
         if (startNode == endNode)
             return true;

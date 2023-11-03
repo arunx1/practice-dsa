@@ -1,5 +1,7 @@
 package com.github.arungahlawat.learning.dataStructures;
 
+import com.github.arungahlawat.learning.dataStructures.helpers.StackNode;
+
 public class Stack<T> {
     private StackNode<T> top;
 

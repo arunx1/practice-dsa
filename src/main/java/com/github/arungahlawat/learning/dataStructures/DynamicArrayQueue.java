@@ -27,7 +27,7 @@ public class DynamicArrayQueue {
             System.out.printf("Queue is empty. Front: %2d | Rear: %2d | Capacity: %2d\n", this.front, this.rear, this.capacity);
             return;
         }
-        for (int i = this.front; i < (this.front > this.rear ? this.rear + this.capacity : this.rear) + 1; i++){
+        for (int i = this.front; i < (this.front > this.rear ? this.rear + this.capacity : this.rear) + 1; i++) {
             System.out.printf("%2d  ", this.array[i % this.capacity]);
         }
         System.out.printf("Front: %2d | Rear: %2d | Capacity: %2d", this.front, this.rear, this.capacity);
@@ -47,12 +47,12 @@ public class DynamicArrayQueue {
             enQueue(datum);
     }
 
-    public void enQueue(int data){
-        if (isFull()){
+    public void enQueue(int data) {
+        if (isFull()) {
             System.out.println("Queue is full. Resizing...");
             resize();
         }
-        this.rear = (this.rear+1)%this.capacity;
+        this.rear = (this.rear + 1) % this.capacity;
         this.array[this.rear] = data;
         if (this.front == -1)
             this.front = this.rear;

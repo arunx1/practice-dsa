@@ -1,4 +1,4 @@
-package com.github.arungahlawat.learning.dataStructures;
+package com.github.arungahlawat.learning.dataStructures.helpers;
 
 import java.util.ArrayList;
 import java.util.List;
