@@ -1,4 +1,4 @@
-package com.github.arungahlawat.learning.ps.leetCode.helpers;
+package com.github.arungahlawat.learning.ps.helpers;
 
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
 import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;

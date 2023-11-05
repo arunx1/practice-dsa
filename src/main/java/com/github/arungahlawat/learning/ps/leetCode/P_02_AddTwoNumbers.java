@@ -2,7 +2,7 @@ package com.github.arungahlawat.learning.ps.leetCode;
 
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
 import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
-import com.github.arungahlawat.learning.ps.leetCode.helpers.LinkedListUtils;
+import com.github.arungahlawat.learning.ps.helpers.LinkedListUtils;
 
 /*
 You are given two non-empty linked lists representing two non-negative integers.

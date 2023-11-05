@@ -2,7 +2,7 @@ package com.github.arungahlawat.learning.tests.ps;
 
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
 import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
-import com.github.arungahlawat.learning.ps.leetCode.helpers.ArrayUtils;
+import com.github.arungahlawat.learning.ps.helpers.ArrayUtils;
 import com.github.arungahlawat.learning.ps.leetCode.*;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;

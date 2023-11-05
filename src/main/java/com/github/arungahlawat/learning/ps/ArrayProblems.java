@@ -1,6 +1,6 @@
 package com.github.arungahlawat.learning.ps;
 
-import com.github.arungahlawat.learning.ps.leetCode.helpers.ArrayUtils;
+import com.github.arungahlawat.learning.ps.helpers.ArrayUtils;
 import com.github.arungahlawat.learning.sorting.QuickSort;
 
 import java.util.*;
