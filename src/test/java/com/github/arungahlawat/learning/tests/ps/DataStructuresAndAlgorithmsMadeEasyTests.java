@@ -92,4 +92,72 @@ public class DataStructuresAndAlgorithmsMadeEasyTests {
         DSAME_03_02_FindNthNodeFromEndOfALinkedList dsame0302FindNthNodeFromEndOfALinkedList = new DSAME_03_02_FindNthNodeFromEndOfALinkedList();
         dsame0302FindNthNodeFromEndOfALinkedList.findNthFromEndUsingTwoPointerGap(linkedList.getHead(), n);
     }
+
+    @Test(description = "03.06 Check whether the linked list is null terminated or has cycles",
+            dataProvider = "OneIntegerArrayWithMaxOneDuplicateTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.DataStructuresAndAlgorithmsMadeEasyDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"DSAME0306", "Linked Lists", "Check if linked list has cycle"})
+    public void checkCycleInLinkedList(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(true, linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        DSAME_03_06_LinkedListCycleDetection dsame0306LinkedListCycleDetection = new DSAME_03_06_LinkedListCycleDetection();
+        boolean isCyclic = dsame0306LinkedListCycleDetection.isCyclic(linkedList.getHead());
+        System.out.printf("Linked list has cycle? %s\n", isCyclic);
+    }
+
+    @Test(description = "03.06 Check whether the linked list is null terminated or has cycles",
+            dataProvider = "OneIntegerArrayWithMaxOneDuplicateTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.DataStructuresAndAlgorithmsMadeEasyDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"DSAME0306", "Linked Lists", "Check if linked list has cycle"})
+    public void checkCycleInLinkedListUsingHashtable(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(true, linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        DSAME_03_06_LinkedListCycleDetection dsame0306LinkedListCycleDetection = new DSAME_03_06_LinkedListCycleDetection();
+        boolean isCyclic = dsame0306LinkedListCycleDetection.isCyclicUsingHashtable(linkedList.getHead());
+        System.out.printf("Linked list has cycle? %s\n", isCyclic);
+    }
+
+    @Test(description = "03.07 Find start of cycle if linked list is cyclic",
+            dataProvider = "OneIntegerArrayWithMaxOneDuplicateTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.DataStructuresAndAlgorithmsMadeEasyDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"DSAME0307", "Linked Lists", "Find start of cycle"})
+    public void findStartOfCycleInLinkedList(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(true, linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        DSAME_03_07_FindStartOfLoopInCyclicLinkedList dsame0307FindStartOfLoopInCyclicLinkedList = new DSAME_03_07_FindStartOfLoopInCyclicLinkedList();
+        dsame0307FindStartOfLoopInCyclicLinkedList.findCycleStart(linkedList.getHead());
+    }
+
+    @Test(description = "03.08 Find length of cycle if linked list is cyclic",
+            dataProvider = "OneIntegerArrayWithMaxOneDuplicateTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.DataStructuresAndAlgorithmsMadeEasyDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"DSAME0308", "Linked Lists", "Find length of cycle"})
+    public void findLengthOfCycleInLinkedList(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(true, linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        DSAME_03_08_FindLengthOfLoopInCyclicLinkedList dsame0308FindLengthOfLoopInCyclicLinkedList = new DSAME_03_08_FindLengthOfLoopInCyclicLinkedList();
+        dsame0308FindLengthOfLoopInCyclicLinkedList.findCycleLength(linkedList.getHead());
+    }
+
+    @Test(description = "03.09 Remove loop if linked list is cyclic",
+            dataProvider = "OneIntegerArrayWithMaxOneDuplicateTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.DataStructuresAndAlgorithmsMadeEasyDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"DSAME0309", "Linked Lists", "Remove loop in linked list"})
+    public void removeLoopInLinkedList(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(true, linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        DSAME_03_09_RemoveLoopInCyclicLinkedList dsame0309RemoveLoopInCyclicLinkedList = new DSAME_03_09_RemoveLoopInCyclicLinkedList();
+        dsame0309RemoveLoopInCyclicLinkedList.removeCycle(linkedList.getHead());
+        linkedList.print();
+    }
 }

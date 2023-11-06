@@ -2,42 +2,67 @@ package com.github.arungahlawat.learning.dataStructures;
 
 import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
 
+import java.util.HashMap;
+import java.util.Map;
+
 public class LinkedList {
+    private final int length;
     private ListNode head;
 
+    public LinkedList() {
+        this.head = null;
+        this.length = 0;
+    }
+
     public LinkedList(int... data) {
-        ListNode lastNode = null;
-        for (int datum : data) {
-            ListNode node = new ListNode(datum);
-            if (head == null) {
-                head = node;
-                lastNode = head;
-            } else {
-                lastNode.next = node;
-                lastNode = lastNode.next;
+        this(false, data);
+    }
+
+    public LinkedList(boolean canHaveCycle, int... data) {
+        this.length = data.length;
+        if (data.length > 0) {
+            Map<Integer, ListNode> nodeMap = new HashMap<>();
+            ListNode lastNode = null;
+            for (int datum : data) {
+                if (canHaveCycle && nodeMap.containsKey(datum)) {
+                    lastNode.next = nodeMap.get(datum);
+                    break;
+                }
+                ListNode node = new ListNode(datum);
+                if (this.head == null) {
+                    this.head = node;
+                    lastNode = this.head;
+                } else {
+                    lastNode.next = node;
+                    lastNode = lastNode.next;
+                }
+                if (canHaveCycle)
+                    nodeMap.put(datum, node);
             }
         }
     }
 
-    public ListNode getHead(){
+    public ListNode getHead() {
         return this.head;
     }
 
-    public void setHead(ListNode head){
-        this.head=head;
+    public void setHead(ListNode head) {
+        this.head = head;
     }
 
-    public void add(int data) {
+    public ListNode add(int data) {
         ListNode currentNode = new ListNode(data);
-        if (head == null) {
-            head = currentNode;
-            return;
+        if (this.head == null) {
+            this.head = currentNode;
+            return this.head;
         }
-        ListNode pointer = head;
-        while (pointer.next != null) {
+        ListNode pointer = this.head;
+        int lengthCounter = 0;
+        while (pointer.next != null && lengthCounter++ < this.length) {
             pointer = pointer.next;
         }
         pointer.next = currentNode;
+        return currentNode;
     }
 
     public void remove(int data) {
@@ -52,7 +77,8 @@ public class LinkedList {
             return;
         }
         ListNode pointer = head;
-        while (pointer.next != null) {
+        int lengthCounter = 0;
+        while (pointer.next != null && lengthCounter++ < this.length) {
             if (pointer.next.val == data) {
                 found = true;
                 System.out.println(data + " removed.");
@@ -77,7 +103,8 @@ public class LinkedList {
         }
         ListNode pointer = head;
         System.out.print("\nHEAD");
-        while (pointer != null) {
+        int lengthCounter = 0;
+        while (pointer != null && lengthCounter++ < this.length) {
             System.out.print(" ---> ");
             System.out.print(pointer.val);
             pointer = pointer.next;
