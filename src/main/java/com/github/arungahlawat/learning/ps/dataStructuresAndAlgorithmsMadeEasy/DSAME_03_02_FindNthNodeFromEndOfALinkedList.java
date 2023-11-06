@@ -5,13 +5,15 @@ import com.github.arungahlawat.learning.ps.helpers.LinkedListUtils;
 
 public class DSAME_03_02_FindNthNodeFromEndOfALinkedList extends LinkedListUtils {
     public int findNthFromEndUsingRecursion(ListNode head, int n) {
-        if (head == null)
+        if (head == null) {
             return 0;
-        int counter = 1 + findNthFromEndUsingRecursion(head.next, n);
-        if (counter == n) {
-            System.out.printf("%dth from end is %d\n", n, head.val);
+        } else {
+            int counter = 1 + findNthFromEndUsingRecursion(head.next, n);
+            if (counter == n) {
+                System.out.printf("%dth from end is %d\n", n, head.val);
+            }
+            return counter;
         }
-        return counter;
     }
 
     public ListNode findNthFromEndUsingListLength(ListNode head, int n) {
