@@ -2,14 +2,14 @@ package com.github.arungahlawat.learning.ps.dataStructuresAndAlgorithmsMadeEasy;
 
 import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
 
-public class DSAME_03_07_FindStartOfLoopInCyclicLinkedList {
-    public void findCycleStart(ListNode head) {
+public class DSAME_03_14_FindLengthOfLoopInCyclicLinkedList {
+    public void findCycleLength(ListNode head) {
         if (head == null || head.next == null) {
             System.out.println("No cycle exists");
             return;
         }
         if (head.next == head) {
-            System.out.printf("Cycle starts at %d\n", head.val);
+            System.out.println("Cycle length is 1");
             return;
         }
         ListNode slowPointer = head;
@@ -24,12 +24,13 @@ public class DSAME_03_07_FindStartOfLoopInCyclicLinkedList {
             }
         }
         if (isCyclic) {
-            slowPointer = head;
+            int cycleLength = 1;
+            slowPointer = slowPointer.next;
             while (slowPointer != fastPointer) {
-                fastPointer = fastPointer.next;
                 slowPointer = slowPointer.next;
+                cycleLength++;
             }
-            System.out.printf("Cycle starts at %d\n", slowPointer.val);
+            System.out.printf("Cycle length is %d\n", cycleLength);
         } else {
             System.out.println("No cycle exist");
         }

@@ -6,25 +6,28 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class LinkedList {
-    private final int length;
+    private int length;
     private ListNode head;
+    private final boolean isCyclic;
 
     public LinkedList() {
         this.head = null;
         this.length = 0;
+        this.isCyclic = false;
     }
 
     public LinkedList(int... data) {
         this(false, data);
     }
 
-    public LinkedList(boolean canHaveCycle, int... data) {
+    public LinkedList(boolean isCyclic, int... data) {
+        this.isCyclic = isCyclic;
         this.length = data.length;
         if (data.length > 0) {
             Map<Integer, ListNode> nodeMap = new HashMap<>();
             ListNode lastNode = null;
             for (int datum : data) {
-                if (canHaveCycle && nodeMap.containsKey(datum)) {
+                if (this.isCyclic && nodeMap.containsKey(datum)) {
                     lastNode.next = nodeMap.get(datum);
                     break;
                 }
@@ -36,7 +39,7 @@ public class LinkedList {
                     lastNode.next = node;
                     lastNode = lastNode.next;
                 }
-                if (canHaveCycle)
+                if (isCyclic)
                     nodeMap.put(datum, node);
             }
         }
@@ -51,6 +54,7 @@ public class LinkedList {
     }
 
     public ListNode add(int data) {
+        this.length = this.length + 1;
         ListNode currentNode = new ListNode(data);
         if (this.head == null) {
             this.head = currentNode;
@@ -83,6 +87,7 @@ public class LinkedList {
                 found = true;
                 System.out.println(data + " removed.");
                 pointer.next = pointer.next.next;
+                this.length--;
                 break;
             }
             pointer = pointer.next;
@@ -93,6 +98,7 @@ public class LinkedList {
 
     public void clear() {
         head = null;
+        this.length = 0;
         System.out.println("List cleared");
     }
 
@@ -104,7 +110,7 @@ public class LinkedList {
         ListNode pointer = head;
         System.out.print("\nHEAD");
         int lengthCounter = 0;
-        while (pointer != null && lengthCounter++ < this.length) {
+        while (pointer != null && (!isCyclic || lengthCounter++ < this.length)) {
             System.out.print(" ---> ");
             System.out.print(pointer.val);
             pointer = pointer.next;

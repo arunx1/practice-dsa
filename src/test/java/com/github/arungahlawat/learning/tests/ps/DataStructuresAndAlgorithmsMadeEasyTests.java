@@ -1,6 +1,7 @@
 package com.github.arungahlawat.learning.tests.ps;
 
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
+import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
 import com.github.arungahlawat.learning.ps.dataStructuresAndAlgorithmsMadeEasy.*;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -130,7 +131,7 @@ public class DataStructuresAndAlgorithmsMadeEasyTests {
         LinkedList linkedList = new LinkedList(true, linkedListData);
         System.out.print("Linked list: ");
         linkedList.print();
-        DSAME_03_07_FindStartOfLoopInCyclicLinkedList dsame0307FindStartOfLoopInCyclicLinkedList = new DSAME_03_07_FindStartOfLoopInCyclicLinkedList();
+        DSAME_03_11_FindStartOfLoopInCyclicLinkedList dsame0307FindStartOfLoopInCyclicLinkedList = new DSAME_03_11_FindStartOfLoopInCyclicLinkedList();
         dsame0307FindStartOfLoopInCyclicLinkedList.findCycleStart(linkedList.getHead());
     }
 
@@ -143,7 +144,7 @@ public class DataStructuresAndAlgorithmsMadeEasyTests {
         LinkedList linkedList = new LinkedList(true, linkedListData);
         System.out.print("Linked list: ");
         linkedList.print();
-        DSAME_03_08_FindLengthOfLoopInCyclicLinkedList dsame0308FindLengthOfLoopInCyclicLinkedList = new DSAME_03_08_FindLengthOfLoopInCyclicLinkedList();
+        DSAME_03_14_FindLengthOfLoopInCyclicLinkedList dsame0308FindLengthOfLoopInCyclicLinkedList = new DSAME_03_14_FindLengthOfLoopInCyclicLinkedList();
         dsame0308FindLengthOfLoopInCyclicLinkedList.findCycleLength(linkedList.getHead());
     }
 
@@ -158,6 +159,71 @@ public class DataStructuresAndAlgorithmsMadeEasyTests {
         linkedList.print();
         DSAME_03_09_RemoveLoopInCyclicLinkedList dsame0309RemoveLoopInCyclicLinkedList = new DSAME_03_09_RemoveLoopInCyclicLinkedList();
         dsame0309RemoveLoopInCyclicLinkedList.removeCycle(linkedList.getHead());
+        linkedList.print();
+    }
+
+    @Test(description = "03.15 Insert node in sorted linked list",
+            dataProvider = "OneSortedIntegerArrayInAscendingOrderWithOneIntegerValueTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.DataStructuresAndAlgorithmsMadeEasyDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"DSAME0315", "Linked Lists", "Add node in sorted linked list"})
+    public void insertNodeInSortedLinkedList(int[] linkedListData, int newNode) {
+        LinkedList linkedList = new LinkedList(linkedListData);
+        System.out.printf("New node to insert %d\n", newNode);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        DSAME_03_15_InsertNodeInSortedLinkedList dsame0315InsertNodeInSortedLinkedList = new DSAME_03_15_InsertNodeInSortedLinkedList();
+        ListNode head = dsame0315InsertNodeInSortedLinkedList.addNode(linkedList.getHead(), new ListNode(newNode));
+        linkedList.setHead(head);
+        System.out.println("Linked list after insertion");
+        linkedList.print();
+    }
+
+    @Test(description = "03.16 Reverse singly linked list",
+            dataProvider = "OneIntegerArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.DataStructuresAndAlgorithmsMadeEasyDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"DSAME0316", "Linked Lists", "Reverse singly linked list"})
+    public void reverseSinglyLinkedList(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        DSAME_0316_ReverseASinglyLinkedList dsame0316ReverseASinglyLinkedList = new DSAME_0316_ReverseASinglyLinkedList();
+        ListNode head = dsame0316ReverseASinglyLinkedList.reverse(linkedList.getHead());
+        linkedList.setHead(head);
+        System.out.println("Linked list after reverse");
+        linkedList.print();
+    }
+
+    @Test(description = "03.16 Reverse singly linked list using recursion",
+            dataProvider = "OneIntegerArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.DataStructuresAndAlgorithmsMadeEasyDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"DSAME0316", "Linked Lists", "Reverse singly linked list using recursion"})
+    public void reverseSinglyLinkedListUsingRecursion(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        DSAME_0316_ReverseASinglyLinkedList dsame0316ReverseASinglyLinkedList = new DSAME_0316_ReverseASinglyLinkedList();
+        ListNode head = dsame0316ReverseASinglyLinkedList.reverseUsingRecursion(linkedList.getHead());
+        linkedList.setHead(head);
+        System.out.println("Linked list after reverse");
+        linkedList.print();
+    }
+
+    @Test(description = "03.16 Reverse singly linked list using stack",
+            dataProvider = "OneIntegerArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.DataStructuresAndAlgorithmsMadeEasyDataProviders.class,
+            threadPoolSize = 10,
+            groups = {"DSAME0316", "Linked Lists", "Reverse singly linked list using stack"})
+    public void reverseSinglyLinkedListUsingStack(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        DSAME_0316_ReverseASinglyLinkedList dsame0316ReverseASinglyLinkedList = new DSAME_0316_ReverseASinglyLinkedList();
+        ListNode head = dsame0316ReverseASinglyLinkedList.reverseUsingStack(linkedList.getHead());
+        linkedList.setHead(head);
+        System.out.println("Linked list after reverse");
         linkedList.print();
     }
 }
