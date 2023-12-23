@@ -315,4 +315,14 @@ public class ArrayDataProviders {
                 new int[]{1,1,1,1},
         };
     }
+
+    @DataProvider(name = "NumbersWithEvenNumberOfDigitsTestData")
+    public Object[] getNumbersWithEvenNumberOfDigitsTestDataTestData() {
+        return new Object[]{
+                new int[]{12,345,2,6,7896},
+                new int[]{555,901,482,1771},
+                new int[]{0, 0, 0, 0},
+                new int[]{1},
+        };
+    }
 }

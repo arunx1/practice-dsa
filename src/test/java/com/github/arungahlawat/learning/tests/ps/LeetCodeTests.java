@@ -505,4 +505,17 @@ public class LeetCodeTests {
         int maxConsecutive = pL01MaxConsecutiveOnes.findMaxConsecutiveOnesUsingSlidingWindow(input);
         System.out.printf("Max consecutive ones : %d\n", maxConsecutive);
     }
+
+    @Test(description = "L02 Find Numbers with Even Number of Digits",
+            dataProvider = "NumbersWithEvenNumberOfDigitsTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL02", "Arrays", "Numbers with Even Number of Digits"})
+    public void findNumbersWithEvenNumberOfDigits(int[] input) {
+        P_L02_NumbersWithEvenNumberOfDigits pL02NumbersWithEvenNumberOfDigits = new P_L02_NumbersWithEvenNumberOfDigits();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        int count = pL02NumbersWithEvenNumberOfDigits.findNumbers(input);
+        System.out.printf("Numbers with Even Number of Digits : %d\n", count);
+    }
 }
