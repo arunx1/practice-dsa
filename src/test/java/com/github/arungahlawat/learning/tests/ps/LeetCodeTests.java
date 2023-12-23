@@ -479,4 +479,17 @@ public class LeetCodeTests {
         int majorityElement = p169MajorityElement.majorityElement(nums);
         System.out.printf("Majority element: %d\n", majorityElement);
     }
+
+    @Test(description = "L01 Max consecutive ones",
+            dataProvider = "MaxConsecutiveOnesTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL01", "Arrays", "Max consecutive ones"})
+    public void findMaxConsecutiveOnes(int[] input) {
+        P_L01_MaxConsecutiveOnes pL01MaxConsecutiveOnes = new P_L01_MaxConsecutiveOnes();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        int maxConsecutive = pL01MaxConsecutiveOnes.findMaxConsecutiveOnes(input);
+        System.out.printf("Max consecutive ones : %d\n", maxConsecutive);
+    }
 }
