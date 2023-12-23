@@ -24,6 +24,7 @@ public class ArrayDataProviders {
     @DataProvider(name = "LongestSubstringTestData")
     public Object[] getLongestSubstringTestData() {
         return new Object[]{
+                "aabbcd",
                 "abcabcbb",
                 "bbbbb",
                 "pwwkew",
@@ -289,6 +290,16 @@ public class ArrayDataProviders {
                 {new int[]{1, 2, 2, 3, 3}, 2},
                 {new int[]{1, 1, 1, 1}, 1},
                 {new int[]{-100, -100, -100, -100, -99, -98, -97, 97, 98, 99, 100, 100, 100}, -97},
+        };
+    }
+
+    @DataProvider(name = "MergeSortedArrayTestData")
+    public Object[][] getMergeSortedArrayTestData() {
+        return new Object[][]{
+                {new int[]{1, 2, 3, 0, 0, 0}, 3, new int[]{2, 5, 6}, 3},
+                {new int[]{1, 0, 0, 0}, 1, new int[]{2, 5, 6}, 3},
+                {new int[]{1}, 1, new int[]{}, 0},
+                {new int[]{0}, 0, new int[]{1}, 1},
         };
     }
 }

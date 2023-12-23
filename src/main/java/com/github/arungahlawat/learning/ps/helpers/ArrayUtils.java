@@ -16,10 +16,9 @@ public class ArrayUtils {
     }
 
     public void print(int[] array, int length) {
-        for (int datum : array) {
-            System.out.printf("%2d  ", datum);
-            if (length-- <= 1)
-                break;
+        int count = 0;
+        while (count < length) {
+            System.out.printf("%2d  ", array[count++]);
         }
         System.out.println();
     }

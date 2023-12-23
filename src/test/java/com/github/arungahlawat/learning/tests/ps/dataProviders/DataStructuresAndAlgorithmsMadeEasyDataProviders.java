@@ -101,4 +101,18 @@ public class DataStructuresAndAlgorithmsMadeEasyDataProviders {
                 new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 1},
         };
     }
+
+    @DataProvider(name = "OneSortedIntegerArrayInAscendingOrderWithOneIntegerValueTestData")
+    public Object[] getOneSortedIntegerArrayInAscendingOrderWithOneIntegerValueTestData() {
+        return new Object[][]{
+                {new int[]{1, 2, 3, 4, 5, 6}, 6},
+                {new int[]{1, 2, 2, 3, 3, 3, 4, 4, 4, 4}, 3},
+                {new int[]{1, 1, 1, 1}, 2},
+                {new int[]{1}, 1},
+                {new int[]{}, -1},
+                {new int[]{1, 2, 3}, 4},
+                {new int[]{-9, -8, -7, -6, -5, -4, 0}, -10},
+                {new int[]{0, 0}, 0}
+        };
+    }
 }

@@ -71,4 +71,26 @@ public class P_13_RomanToInteger {
         }
         return number;
     }
+
+    public int romanToIntBetter(String s) {
+        short[] romanHashtable = new short[26];
+        romanHashtable['I' - 'A'] = 1;
+        romanHashtable['V' - 'A'] = 5;
+        romanHashtable['X' - 'A'] = 10;
+        romanHashtable['L' - 'A'] = 50;
+        romanHashtable['C' - 'A'] = 100;
+        romanHashtable['D' - 'A'] = 500;
+        romanHashtable['M' - 'A'] = 1000;
+        int number = 0;
+        int index = 0;
+        while (index < s.length()) {
+            short currentIndexValue = romanHashtable[s.charAt(index) - 'A'];
+            if (index < s.length() - 1 && currentIndexValue < romanHashtable[s.charAt(index + 1) - 'A'])
+                number -= currentIndexValue;
+            else
+                number += currentIndexValue;
+            index++;
+        }
+        return number;
+    }
 }
