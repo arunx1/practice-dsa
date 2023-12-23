@@ -29,4 +29,17 @@ public class P_L01_MaxConsecutiveOnes {
         }
         return Math.max(maxConsecutives, currentMax);
     }
+
+    public int findMaxConsecutiveOnesUsingSlidingWindow(int[] nums) {
+        int maxConsecutives = 0;
+        int previousIndex = 0;
+        int nextIndex = 0;
+        while (nextIndex < nums.length) {
+            if (nums[nextIndex] == 0)
+                previousIndex = nextIndex + 1;
+            nextIndex++;
+            maxConsecutives = Math.max(maxConsecutives, nextIndex - previousIndex);
+        }
+        return maxConsecutives;
+    }
 }
