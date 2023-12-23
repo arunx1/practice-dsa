@@ -89,4 +89,48 @@ public class P_12_IntegerToRoman {
         }
         return stringBuilder.toString();
     }
+
+    public String intToRomanNew(int num) {
+        short[] romanHashtable = new short[26];
+        romanHashtable['I' - 'A'] = 1;
+        romanHashtable['V' - 'A'] = 5;
+        romanHashtable['X' - 'A'] = 10;
+        romanHashtable['L' - 'A'] = 50;
+        romanHashtable['C' - 'A'] = 100;
+        romanHashtable['D' - 'A'] = 500;
+        romanHashtable['M' - 'A'] = 1000;
+        char[] precedenceStack = {'M','D','C','L','X','V','I'};
+        StringBuilder sb = new StringBuilder();
+        short substractor = 100;
+        short index = 0;
+        while (num > 0) {
+            char top = precedenceStack[index++];
+            short currentTop = romanHashtable[top - 'A'];
+            while (num / currentTop > 0) {
+                sb.append(top);
+                num = num - currentTop;
+            }
+            if (currentTop <= substractor) {
+                substractor /= 10;
+            }
+            if (substractor > 0 && num >= (currentTop - substractor)) {
+                while (num / (currentTop - substractor) > 0) {
+                    switch (substractor) {
+                        case 100:
+                            sb.append('C');
+                            break;
+                        case 10:
+                            sb.append('X');
+                            break;
+                        case 1:
+                            sb.append('I');
+                            break;
+                    }
+                    sb.append(top);
+                    num = num - (currentTop - substractor);
+                }
+            }
+        }
+        return sb.toString();
+    }
 }

@@ -46,4 +46,18 @@ public class P_27_RemoveAllOccurrences {
         }
         return i;
     }
+
+    public int removeElementSimple(int[] nums, int val) {
+        int prev = 0, next = 0;
+        while (next < nums.length) {
+            if (nums[next] != val) {
+                if (prev != next) {
+                    nums[prev] = nums[next];
+                }
+                prev++;
+            }
+            next++;
+        }
+        return prev;
+    }
 }

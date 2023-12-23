@@ -18,7 +18,6 @@ public class LeetCodeTests {
     @Test(description = "01 Two Sum : Using bruit force",
             dataProvider = "TwoSumTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC01", "Arrays", "Two Sum"})
     public void findTwoSumUsingBruitForce(int[] nums, int target) {
         ArrayUtils arrayUtils = new ArrayUtils();
@@ -36,7 +35,6 @@ public class LeetCodeTests {
     @Test(description = "01 Two Sum : Using two pointers on sorted array",
             dataProvider = "TwoSumTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC01", "Arrays", "Two Sum"})
     public void findTwoSumUsingTwoPointersInSortedArray(int[] nums, int target) {
         ArrayUtils arrayUtils = new ArrayUtils();
@@ -54,7 +52,6 @@ public class LeetCodeTests {
     @Test(description = "01 Two Sum : Using hashtable",
             dataProvider = "TwoSumTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC01", "Arrays", "Two Sum"})
     public void findTwoSumUsingHashtable(int[] nums, int target) {
         ArrayUtils arrayUtils = new ArrayUtils();
@@ -72,7 +69,6 @@ public class LeetCodeTests {
     @Test(description = "02 Add Two Numbers : Find sum of two numbers represented in linked list in reverse order",
             dataProvider = "AddTwoNumbersTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC02", "Linked Lists", "Add Two Numbers"})
     public void addTwoNumbers(int[] first, int[] second) {
         LinkedList firstLinkedList = new LinkedList(first);
@@ -90,7 +86,6 @@ public class LeetCodeTests {
     @Test(description = "02 Add Two Numbers : 04 Find sum of two numbers represented in linkedlist in reverse order",
             dataProvider = "AddTwoNumbersTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC02", "Linked Lists", "Add Two Numbers"})
     public void addTwoNumbersUsingNodes(int[] first, int[] second) {
         LinkedList firstLinkedList = new LinkedList(first);
@@ -110,7 +105,6 @@ public class LeetCodeTests {
     @Test(description = "03 Longest Substring Without Repeating Characters : Find length of longest substring without duplicate chars",
             dataProvider = "LongestSubstringTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC03", "Strings", "Longest Substring Without Repeating Characters"})
     public void findLengthOfLongestSubstring(String input) {
         P_03_LongestSubstringWithoutRepeatingChars p03LongestSubstringWithoutRepeatingChars = new P_03_LongestSubstringWithoutRepeatingChars();
@@ -122,7 +116,6 @@ public class LeetCodeTests {
     @Test(description = "03 Longest Substring Without Repeating Characters : Find length of longest substring without duplicate chars",
             dataProvider = "LongestSubstringTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC03", "Strings", "Longest Substring Without Repeating Characters"})
     public void findLengthOfLongestSubstringUsingCharTable(String input) {
         P_03_LongestSubstringWithoutRepeatingChars p03LongestSubstringWithoutRepeatingChars = new P_03_LongestSubstringWithoutRepeatingChars();
@@ -134,7 +127,6 @@ public class LeetCodeTests {
     @Test(description = "04 Median of Two Sorted Arrays : Find median of 2 sorted arrays",
             dataProvider = "MedianOfSortedArraysTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC04", "Strings", "Median of Two Sorted Arrays"})
     public void findMedianOfTwoSortedArrays(int[] nums1, int[] nums2) {
         P_04_MedianOfTwoSortedArrays p_04_medianOfTwoSortedArrays = new P_04_MedianOfTwoSortedArrays();
@@ -150,7 +142,6 @@ public class LeetCodeTests {
     @Test(description = "05 Longest Palindromic Substring : Find longest palindromic substring",
             dataProvider = "LongestPalindromeSubstringTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC05", "Strings", "Longest Palindromic Substring"})
     public void findLongestPalindromicSubstring(String input) {
         P_05_LongestPalindromicSubstring p05LongestPalindromicSubstring = new P_05_LongestPalindromicSubstring();
@@ -162,12 +153,10 @@ public class LeetCodeTests {
     @Test(description = "06 Zigzag Conversion : Get string in zigzag conversion",
             dataProvider = "ZigzagConversionTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC06", "Strings", "Zigzag Conversion"})
     public void convertStringInZigZag(String s, int numRows) {
         P_06_ZigzagConversion p06ZigzagConversion = new P_06_ZigzagConversion();
         System.out.printf("Input string: '%s' rows: %d\n", s, numRows);
-
         String convertedString = p06ZigzagConversion.convert(s, numRows);
         System.out.printf("Converted string: '%s'\n", convertedString);
     }
@@ -175,7 +164,6 @@ public class LeetCodeTests {
     @Test(description = "07 Reverse Integer : Reverse the given integer",
             dataProvider = "ReverseIntegerTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC07", "Numbers", "Reverse Integer"})
     public void reverseInteger(int x) {
         P_07_ReverseInteger p07ReverseInteger = new P_07_ReverseInteger();
@@ -187,7 +175,6 @@ public class LeetCodeTests {
     @Test(description = "08 String to integer (atoi) : Parse and convert string to integer",
             dataProvider = "StringToIntegerTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC08", "Numbers", "String to Integer"})
     public void stringToInteger(String s) {
         P_08_StringToIntegerConversion p08StringToIntegerConversion = new P_08_StringToIntegerConversion();
@@ -199,7 +186,6 @@ public class LeetCodeTests {
     @Test(description = "09 Palindrome Number : Check if a number is palindrome or not",
             dataProvider = "PalindromeNumberTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC09", "Numbers", "Palindrome Number"})
     public void findIfNumberIsPalindrome(int x) {
         P_09_PalindromeNumber p09PalindromeNumber = new P_09_PalindromeNumber();
@@ -211,7 +197,6 @@ public class LeetCodeTests {
     @Test(description = "11 Container With Most Water : Find max water container area",
             dataProvider = "ContainerWithMaxWaterTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC11", "Arrays", "Container With Most Water"})
     public void getContainerWithMaxArea(int[] height) {
         P_11_ContainerWithMostWater p11ContainerWithMostWater = new P_11_ContainerWithMostWater();
@@ -225,7 +210,6 @@ public class LeetCodeTests {
     @Test(description = "12 Integer to Roman : Return roman representation of a number",
             dataProvider = "IntegerToRomanTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC12", "Strings", "Integer to Roman"})
     public void printRomanRepresentationOfANumber(int x) {
         P_12_IntegerToRoman p12IntegerToRoman = new P_12_IntegerToRoman();
@@ -237,7 +221,6 @@ public class LeetCodeTests {
     @Test(description = "13 Roman to Integer : Return integer representation of a roman number",
             dataProvider = "RomanToIntegerTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC13", "Strings", "Roman to Integer"})
     public void printIntegerRepresentationOfARomanNumber(String s) {
         P_13_RomanToInteger p13RomanToInteger = new P_13_RomanToInteger();
@@ -249,7 +232,6 @@ public class LeetCodeTests {
     @Test(description = "14 Longest Common Prefix : Find longest common prefix from array of strings",
             dataProvider = "LongestCommonPrefixTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC14", "Strings", "Longest Common Prefix"})
     public void findLongestCommonPrefix(String[] strs) {
         P_14_LongestCommonPrefix p14LongestCommonPrefix = new P_14_LongestCommonPrefix();
@@ -263,7 +245,6 @@ public class LeetCodeTests {
     @Test(description = "15 Three Sum : Find all the triplets whose sum is 0",
             dataProvider = "ThreeSumTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC15", "Arrays", "Three Sum"})
     public void findTripletsWithSumEqualToZero(int[] nums) {
         P_15_ThreeSum p15ThreeSum = new P_15_ThreeSum();
@@ -278,7 +259,6 @@ public class LeetCodeTests {
     @Test(description = "16 Three Sum closest : Find the closest triplet sum to target",
             dataProvider = "ThreeSumClosestTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC16", "Arrays", "Three Sum Closest"})
     public void findTripletsWithSumClosestToTarget(int[] nums, int target) {
         P_16_ThreeSumClosest p16ThreeSumClosest = new P_16_ThreeSumClosest();
@@ -293,7 +273,6 @@ public class LeetCodeTests {
     @Test(description = "17 Letter combination of a phone number : return list of letter combinations",
             dataProvider = "LetterCombinationOfANumberTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC17", "Strings", "Letter combination of a phone number"})
     public void findLetterCombinationOfANumber(String digits) {
         P_17_LetterCombinationOfAPhoneNumber p17LetterCombinationOfAPhoneNumber = new P_17_LetterCombinationOfAPhoneNumber();
@@ -307,7 +286,6 @@ public class LeetCodeTests {
     @Test(description = "18 Four Sum : Find quadruplets with sum equal to target",
             dataProvider = "FourSumTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC18", "Arrays", "Four Sum"})
     public void findQuadrupletsWithSumEqualToTarget(int[] nums, int target) {
         P_18_FourSum p18FourSum = new P_18_FourSum();
@@ -323,7 +301,6 @@ public class LeetCodeTests {
     @Test(description = "19 Remove Nth Node From End of List",
             dataProvider = "RemoveNthNodeTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC19", "Linked Lists", "Remove Nth Node From End of List"})
     public void removeNthNode(int[] list, int n) {
         LinkedList linkedList = new LinkedList(list);
@@ -340,7 +317,6 @@ public class LeetCodeTests {
     @Test(description = "20 Valid Parentheses",
             dataProvider = "ValidParenthesesTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC20", "Strings", "Valid Parentheses"})
     public void validIfInputHasValidParentheses(String s) {
         P_20_Valid_Parentheses p20ValidParentheses = new P_20_Valid_Parentheses();
@@ -352,7 +328,6 @@ public class LeetCodeTests {
     @Test(description = "21 Merge Two Sorted Lists",
             dataProvider = "MergeTwoSortedListsTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC21", "Linked Lists", "Merge Two Sorted Lists"})
     public void mergeTwoSortedLists(int[] first, int[] second) {
         LinkedList firstLinkedList = new LinkedList(first);
@@ -372,7 +347,6 @@ public class LeetCodeTests {
     @Test(description = "23 Merge k Sorted Lists",
             dataProvider = "MergeKSortedListsTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC23", "Linked Lists", "Merge K Sorted Lists"})
     public void mergeKSortedLists(int[]... lists) {
         ListNode[] listHeads = new ListNode[lists.length];
@@ -393,7 +367,6 @@ public class LeetCodeTests {
     @Test(description = "24 Swap Nodes in Pairs",
             dataProvider = "SwapNodesInPairsTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC24", "Linked Lists", "Swap Nodes in Pairs"})
     public void swapNodesInPairs(int[] list) {
         LinkedList linkedList = new LinkedList(list);
@@ -409,7 +382,6 @@ public class LeetCodeTests {
     @Test(description = "26 Remove Duplicates from Sorted Array",
             dataProvider = "RemoveDuplicatesFromSortedArrayTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC26", "Arrays", "Remove Duplicates from Sorted Array"})
     public void removeDuplicatesFromSortedArray(int[] nums) {
         P_26_RemoveDuplicatesFromSortedArray p26RemoveDuplicatesFromSortedArray = new P_26_RemoveDuplicatesFromSortedArray();
@@ -424,7 +396,6 @@ public class LeetCodeTests {
     @Test(description = "27 Remove all occurrences of val from array",
             dataProvider = "RemoveElementTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
-            threadPoolSize = 10,
             groups = {"LC27", "Arrays", "Remove Element"})
     public void removeAllOccurrencesOfElement(int[] nums, int val) {
         P_27_RemoveAllOccurrences p27RemoveAllOccurrences = new P_27_RemoveAllOccurrences();
@@ -434,5 +405,78 @@ public class LeetCodeTests {
         int length = p27RemoveAllOccurrences.removeElement(nums, val);
         System.out.print("Array after removing occurrences: ");
         arrayUtils.print(nums, length);
+    }
+
+    @Test(description = "27 Remove all occurrences of val from array",
+            dataProvider = "RemoveElementTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LC27", "Arrays", "Remove Element"})
+    public void removeAllOccurrencesOfElementSimple(int[] nums, int val) {
+        P_27_RemoveAllOccurrences p27RemoveAllOccurrences = new P_27_RemoveAllOccurrences();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.printf("Val: %d, Input array: ", val);
+        arrayUtils.print(nums);
+        int length = p27RemoveAllOccurrences.removeElementSimple(nums, val);
+        System.out.print("Array after removing occurrences: ");
+        arrayUtils.print(nums, length);
+    }
+
+    @Test(description = "88 Merge Sorted Array",
+            dataProvider = "MergeSortedArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LC88", "Arrays", "Merge Sorted Array"})
+    public void mergeSortedArray(int[] nums1, int m, int[] nums2, int n) {
+        P_88_Merge_Sorted_Array p88MergeSortedArray = new P_88_Merge_Sorted_Array();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.printf("nums1 [%d]: ", m);
+        arrayUtils.print(nums1, m);
+        System.out.printf("nums2 [%d]: ", n);
+        arrayUtils.print(nums2, n);
+        p88MergeSortedArray.merge(nums1, m, nums2, n);
+        System.out.print("Merged array: ");
+        arrayUtils.print(nums1, m + n);
+    }
+
+    @Test(description = "80 Remove Duplicates from Sorted Array II",
+            dataProvider = "RemoveDuplicatesFromSortedArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LC80", "Arrays", "Remove Duplicates from Sorted Array II"})
+    public void removeMoreThanTwoDuplicatesFromSortedArray(int[] nums) {
+        P_80_RemoveMoreThanTwoDuplicates p80RemoveMoreThanTwoDuplicates = new P_80_RemoveMoreThanTwoDuplicates();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array: ");
+        arrayUtils.print(nums);
+        int length = p80RemoveMoreThanTwoDuplicates.removeDuplicates(nums);
+        System.out.print("Array after removing duplicates: ");
+        arrayUtils.print(nums, length);
+    }
+
+    @Test(description = "88 Merge Sorted Array",
+            dataProvider = "MergeSortedArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LC88", "Arrays", "Merge Sorted Array"})
+    public void mergeSortedArrayWithNoAdditionalSpace(int[] nums1, int m, int[] nums2, int n) {
+        P_88_Merge_Sorted_Array p88MergeSortedArray = new P_88_Merge_Sorted_Array();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.printf("nums1 [%d]: ", m);
+        arrayUtils.print(nums1, m);
+        System.out.printf("nums2 [%d]: ", n);
+        arrayUtils.print(nums2, n);
+        p88MergeSortedArray.mergeWithoutAdditionalSpace(nums1, m, nums2, n);
+        System.out.print("Merged array: ");
+        arrayUtils.print(nums1, m + n);
+    }
+
+    @Test(description = "169 Majority Element",
+            dataProvider = "RemoveDuplicatesFromSortedArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LC169", "Arrays", "Majority Element"})
+    public void findMajorityElement(int[] nums) {
+        P_169_Majority_Element p169MajorityElement = new P_169_Majority_Element();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array: ");
+        arrayUtils.print(nums);
+        int majorityElement = p169MajorityElement.majorityElement(nums);
+        System.out.printf("Majority element: %d\n", majorityElement);
     }
 }
