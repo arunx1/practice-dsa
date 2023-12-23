@@ -507,7 +507,7 @@ public class LeetCodeTests {
     }
 
     @Test(description = "L02 Find Numbers with Even Number of Digits",
-            dataProvider = "NumbersWithEvenNumberOfDigitsTestData",
+            dataProvider = "getNumbersWithEvenNumberOfDigitsTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
             groups = {"LL02", "Arrays", "Numbers with Even Number of Digits"})
     public void findNumbersWithEvenNumberOfDigits(int[] input) {
@@ -517,5 +517,33 @@ public class LeetCodeTests {
         arrayUtils.print(input);
         int count = pL02NumbersWithEvenNumberOfDigits.findNumbers(input);
         System.out.printf("Numbers with Even Number of Digits : %d\n", count);
+    }
+
+    @Test(description = "L03.01 Squares of a Sorted Array",
+            dataProvider = "SortedSquaresTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL03.01", "Arrays", "Squares of a Sorted Array"})
+    public void getSortedSquares(int[] input) {
+        P_L03_SquaresOfSortedArray pL03SquaresOfSortedArray = new P_L03_SquaresOfSortedArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = pL03SquaresOfSortedArray.sortedSquares(input);
+        System.out.print("Array of Sorted Squares: :");
+        arrayUtils.print(input);
+    }
+
+    @Test(description = "L03.02 Squares of a Sorted Array",
+            dataProvider = "SortedSquaresTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL03.02", "Arrays", "Squares of a Sorted Array"})
+    public void getSortedSquaresOptimised(int[] input) {
+        P_L03_SquaresOfSortedArray pL03SquaresOfSortedArray = new P_L03_SquaresOfSortedArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = pL03SquaresOfSortedArray.sortedSquaresOptimised(input);
+        System.out.print("Array of Sorted Squares: :");
+        arrayUtils.print(input);
     }
 }

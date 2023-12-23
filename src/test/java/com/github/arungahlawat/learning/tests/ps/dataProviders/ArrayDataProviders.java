@@ -317,12 +317,24 @@ public class ArrayDataProviders {
     }
 
     @DataProvider(name = "NumbersWithEvenNumberOfDigitsTestData")
-    public Object[] getNumbersWithEvenNumberOfDigitsTestDataTestData() {
+    public Object[] getNumbersWithEvenNumberOfDigitsTestData() {
         return new Object[]{
                 new int[]{12,345,2,6,7896},
                 new int[]{555,901,482,1771},
                 new int[]{0, 0, 0, 0},
                 new int[]{1},
+        };
+    }
+
+    @DataProvider(name = "SortedSquaresTestData")
+    public Object[] getSortedSquaresTestData() {
+        return new Object[]{
+                new int[]{-4,-1,0,3,10},
+                new int[]{-7,-3,2,3,11},
+                new int[]{-7,-3,-2,-1},
+                new int[]{0,1,2,3,4,5},
+                new int[]{-2,2},
+                new int[]{-10000,-9999,-7,-5,0,0,10000},
         };
     }
 }
