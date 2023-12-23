@@ -546,4 +546,18 @@ public class LeetCodeTests {
         System.out.print("Array of Sorted Squares: :");
         arrayUtils.print(input);
     }
+
+    @Test(description = "L04 Duplicate Zeros",
+            dataProvider = "DuplicateZerosTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL04", "Arrays", "Duplicate Zeros"})
+    public void getDuplicateZeros(int[] input) {
+        P_L04_DuplicateZeros pL04DuplicateZeros = new P_L04_DuplicateZeros();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        pL04DuplicateZeros.duplicateZerosUsingAdditionalArray(input);
+        System.out.print("Array with duplicate zeros:");
+        arrayUtils.print(input);
+    }
 }

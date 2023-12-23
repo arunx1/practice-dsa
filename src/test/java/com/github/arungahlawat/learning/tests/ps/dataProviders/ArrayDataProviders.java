@@ -337,4 +337,15 @@ public class ArrayDataProviders {
                 new int[]{-10000,-9999,-7,-5,0,0,10000},
         };
     }
+
+    @DataProvider(name = "DuplicateZerosTestData")
+    public Object[] getDuplicateZerosTestData() {
+        return new Object[]{
+                new int[]{1,0,2,3,0,4,5,0},
+                new int[]{1,2,3},
+                new int[]{1,2,3,0},
+                new int[]{0,1,2,3},
+                new int[]{0},
+        };
+    }
 }
