@@ -394,4 +394,17 @@ public class ArrayDataProviders {
                 new int[]{-15, 0, -18, 0, 0, 14, 12, 9, 0, 2},
         };
     }
+
+    @DataProvider(name = "SortArrayByParityTestData")
+    public Object[] getSortArrayByParityTestData() {
+        return new Object[]{
+                new int[]{3, 1, 2, 4},
+                new int[]{0},
+                new int[]{0, 2, 4, 6, 8, 10, 12, 14},
+                new int[]{1, 3, 5, 7, 9, 11},
+                new int[]{1, 3, 5, 7, 9, 11, 2},
+                new int[]{1, 0, 2, 4, 6, 8, 10, 12, 14},
+                new int[]{1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 10, 12, 14},
+        };
+    }
 }

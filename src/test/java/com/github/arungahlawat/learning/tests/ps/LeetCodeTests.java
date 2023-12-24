@@ -642,4 +642,18 @@ public class LeetCodeTests {
         System.out.print("Array after moving all zeros to right:");
         arrayUtils.print(input);
     }
+
+    @Test(description = "L11 Sort Array By Parity",
+            dataProvider = "SortArrayByParityTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL11", "Arrays", "Sort Array By Parity"})
+    public void sortArrayByParity(int[] input) {
+        P_L11_SortArrayByParity pL11SortArrayByParity = new P_L11_SortArrayByParity();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = pL11SortArrayByParity.sortArrayByParity(input);
+        System.out.print("Array after sorting by parity:");
+        arrayUtils.print(input);
+    }
 }
