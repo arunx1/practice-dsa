@@ -628,4 +628,18 @@ public class LeetCodeTests {
         System.out.print("Array after replacements:");
         arrayUtils.print(input);
     }
+
+    @Test(description = "L10 Move Zeros",
+            dataProvider = "MoveZerosTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL10", "Arrays", "Move Zeros"})
+    public void moveZeros(int[] input) {
+        P_L10_MoveZeroes pL10MoveZeroes = new P_L10_MoveZeroes();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        pL10MoveZeroes.moveZeroes(input);
+        System.out.print("Array after moving all zeros to right:");
+        arrayUtils.print(input);
+    }
 }

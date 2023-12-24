@@ -385,4 +385,13 @@ public class ArrayDataProviders {
                 new int[]{-10, 1, 10},
         };
     }
+
+    @DataProvider(name = "MoveZerosTestData")
+    public Object[] getMoveZerosTestData() {
+        return new Object[]{
+                new int[]{0, 1, 0, 3, 12},
+                new int[]{0},
+                new int[]{-15, 0, -18, 0, 0, 14, 12, 9, 0, 2},
+        };
+    }
 }
