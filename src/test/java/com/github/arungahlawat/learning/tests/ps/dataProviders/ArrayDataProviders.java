@@ -454,11 +454,35 @@ public class ArrayDataProviders {
         };
     }
 
+    @DataProvider(name = "RunningSumOfOneDArrayTestData")
+    public Object[] getRunningSumOfOneDArrayTestData() {
+        return new Object[]{
+                new int[]{1, 1, 1, 1, 1},
+                new int[]{1},
+                new int[]{4, 3, 2, 7, 8, 2, 3, 1},
+                new int[]{1, 1},
+                new int[]{1, 2, 3, 4, 5, 6, 7, 8, 10, 10},
+                new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1},
+                new int[]{10, 9, 9, 7, 7, 7, 6, 3, 2, 2},
+        };
+    }
+
     @DataProvider(name = "AddTwoNumberTestData")
     public Object[][] getAddTwoNumberTestData() {
         return new Object[][]{
                 {3, 3},
                 {1, 2},
+        };
+    }
+
+    @DataProvider(name = "RichestCustomerWealthTestData")
+    public Object[][] getRichestCustomerWealthTestData() {
+        return new Object[][]{
+                {new int[]{1, 2, 4}, new int[]{1, 3, 4}},
+                {new int[]{}, new int[]{}},
+                {new int[]{0}, new int[]{0}},
+                {new int[]{1, 2, 3}, new int[]{4, 3, 1}},
+                {new int[]{1, 2, 3, 4, 5}, new int[]{4, 5, 6, 7, 8}},
         };
     }
 }

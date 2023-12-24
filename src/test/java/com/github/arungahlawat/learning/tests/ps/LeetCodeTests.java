@@ -697,6 +697,33 @@ public class LeetCodeTests {
         System.out.printf("N and it's double exist in array? %b", isExist);
     }
 
+    @Test(description = "1480 Running Sum of 1d Array",
+            dataProvider = "RunningSumOfOneDArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Array", "Running Sum of 1d Array"})
+    public void runningSumOf1dArray(int[] input) {
+        P_1480_RunningSumOfOneDArray p1480RunningSumOfOneDArray = new P_1480_RunningSumOfOneDArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = p1480RunningSumOfOneDArray.runningSum(input);
+        System.out.print("Running sum: ");
+        arrayUtils.print(input);
+    }
+
+    @Test(description = "1672 Richest Customer Wealth",
+            dataProvider = "RichestCustomerWealthTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Array", "Richest Customer Wealth"})
+    public void richestCustomerWealth(int[][] input) {
+        P_1672_RichestCustomerWealth p1672RichestCustomerWealth = new P_1672_RichestCustomerWealth();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : \n");
+        arrayUtils.print(input);
+        int richest = p1672RichestCustomerWealth.maximumWealth(input);
+        System.out.printf("Richest : %d", richest);
+    }
+
     @Test(description = "2235 Add two numbers",
             dataProvider = "AddTwoNumberTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
