@@ -507,7 +507,7 @@ public class LeetCodeTests {
     }
 
     @Test(description = "L02 Find Numbers with Even Number of Digits",
-            dataProvider = "NumbersWithEvenNumberOfDigitsTestData",
+            dataProvider = "getNumbersWithEvenNumberOfDigitsTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
             groups = {"LL02", "Arrays", "Numbers with Even Number of Digits"})
     public void findNumbersWithEvenNumberOfDigits(int[] input) {
@@ -517,5 +517,129 @@ public class LeetCodeTests {
         arrayUtils.print(input);
         int count = pL02NumbersWithEvenNumberOfDigits.findNumbers(input);
         System.out.printf("Numbers with Even Number of Digits : %d\n", count);
+    }
+
+    @Test(description = "L03.01 Squares of a Sorted Array",
+            dataProvider = "SortedSquaresTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL03.01", "Arrays", "Squares of a Sorted Array"})
+    public void getSortedSquares(int[] input) {
+        P_L03_SquaresOfSortedArray pL03SquaresOfSortedArray = new P_L03_SquaresOfSortedArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = pL03SquaresOfSortedArray.sortedSquares(input);
+        System.out.print("Array of Sorted Squares: :");
+        arrayUtils.print(input);
+    }
+
+    @Test(description = "L03.02 Squares of a Sorted Array",
+            dataProvider = "SortedSquaresTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL03.02", "Arrays", "Squares of a Sorted Array"})
+    public void getSortedSquaresOptimised(int[] input) {
+        P_L03_SquaresOfSortedArray pL03SquaresOfSortedArray = new P_L03_SquaresOfSortedArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = pL03SquaresOfSortedArray.sortedSquaresOptimised(input);
+        System.out.print("Array of Sorted Squares: :");
+        arrayUtils.print(input);
+    }
+
+    @Test(description = "L04 Duplicate Zeros",
+            dataProvider = "DuplicateZerosTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL04", "Arrays", "Duplicate Zeros"})
+    public void getDuplicateZeros(int[] input) {
+        P_L04_DuplicateZeros pL04DuplicateZeros = new P_L04_DuplicateZeros();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        pL04DuplicateZeros.duplicateZerosUsingAdditionalArray(input);
+        System.out.print("Array with duplicate zeros:");
+        arrayUtils.print(input);
+    }
+
+    @Test(description = "L05 Remove element",
+            dataProvider = "RemoveElementTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL05", "Arrays", "Remove element"})
+    public void removeElement(int[] input, int val) {
+        P_L05_RemoveElement pL05RemoveElement = new P_L05_RemoveElement();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.printf("Val: %d\nInput array : ", val);
+        arrayUtils.print(input);
+        int length = pL05RemoveElement.removeElementOptimised(input, val);
+        System.out.print("Array after removing elements:");
+        arrayUtils.print(input, length);
+    }
+
+    @Test(description = "L06 Remove duplicates from sorted array",
+            dataProvider = "RemoveDuplicatesFromSortedArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL06", "Arrays", "Remove duplicates from sorted array"})
+    public void removeDuplicatesFromSortedArrayInAsc(int[] input) {
+        P_L06_RemoveDuplicatesFromSortedArray pL06RemoveDuplicatesFromSortedArray = new P_L06_RemoveDuplicatesFromSortedArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        int length = pL06RemoveDuplicatesFromSortedArray.removeDuplicatesBetter(input);
+        System.out.print("Array after removing duplicates:");
+        arrayUtils.print(input, length);
+    }
+
+    @Test(description = "L07 Check if N and it's double exist in array",
+            dataProvider = "CheckNAndDoubleTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL07", "Arrays", "Check N and Double"})
+    public void checkNAndDoubleExist(int[] input) {
+        P_L07_CheckIfNAndDoubleExistInArray pL07CheckIfNAndDoubleExistInArray = new P_L07_CheckIfNAndDoubleExistInArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        boolean isExist = pL07CheckIfNAndDoubleExistInArray.checkIfExistN2(input);
+        System.out.printf("N and it's double exist in array? %b\n", isExist);
+    }
+
+    @Test(description = "L08 Valid Mountain Array",
+            dataProvider = "CheckMountainArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL08", "Arrays", "Valid Mountain Array"})
+    public void checkIfValidMountainArray(int[] input) {
+        P_L08_ValidMountainArray pL08ValidMountainArray = new P_L08_ValidMountainArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        boolean isExist = pL08ValidMountainArray.validMountainArray(input);
+        System.out.printf("Valid mountain array? %b\n", isExist);
+    }
+
+    @Test(description = "L09 Replace Elements with Greatest Element on Right Side",
+            dataProvider = "ReplaceWithGreatestTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL09", "Arrays", "Replace with Greatest"})
+    public void replaceWithGreatest(int[] input) {
+        P_L09_ReplaceElementsWithGreatestElementOnRightSide pL09ReplaceElementsWithGreatestElementOnRightSide = new P_L09_ReplaceElementsWithGreatestElementOnRightSide();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = pL09ReplaceElementsWithGreatestElementOnRightSide.replaceElementsOptimised(input);
+        System.out.print("Array after replacements:");
+        arrayUtils.print(input);
+    }
+
+    @Test(description = "L10 Move Zeros",
+            dataProvider = "MoveZerosTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL10", "Arrays", "Move Zeros"})
+    public void moveZeros(int[] input) {
+        P_L10_MoveZeroes pL10MoveZeroes = new P_L10_MoveZeroes();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        pL10MoveZeroes.moveZeroes(input);
+        System.out.print("Array after moving all zeros to right:");
+        arrayUtils.print(input);
     }
 }
