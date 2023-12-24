@@ -440,4 +440,17 @@ public class ArrayDataProviders {
                 new int[]{Integer.MIN_VALUE, 1, 1},
         };
     }
+
+    @DataProvider(name = "FindMissingNumbersTestData")
+    public Object[] getFindMissingNumbersTestData() {
+        return new Object[]{
+                new int[]{1, 1, 1, 1, 1},
+                new int[]{1},
+                new int[]{4, 3, 2, 7, 8, 2, 3, 1},
+                new int[]{1, 1},
+                new int[]{1, 2, 3, 4, 5, 6, 7, 8, 10, 10},
+                new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1},
+                new int[]{10, 9, 9, 7, 7, 7, 6, 3, 2, 2},
+        };
+    }
 }

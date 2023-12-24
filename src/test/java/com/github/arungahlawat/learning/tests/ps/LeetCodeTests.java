@@ -682,4 +682,18 @@ public class LeetCodeTests {
         int thirdMax = pL13ThirdMaximumNumber.thirdMaxOptimised(input);
         System.out.printf("Third max number: %d", thirdMax);
     }
+
+    @Test(description = "L14 Find missing numbers",
+            dataProvider = "FindMissingNumbersTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Arrays", "Counters"})
+    public void findMissingNumbers(int[] input) {
+        P_L14_FindMissingNumbers pL14FindMissingNumbers = new P_L14_FindMissingNumbers();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        List<Integer> missingNumbers = pL14FindMissingNumbers.findDisappearedNumbersNoExtraSpace(input);
+        System.out.println("Missing numbers:");
+        arrayUtils.print(missingNumbers);
+    }
 }
