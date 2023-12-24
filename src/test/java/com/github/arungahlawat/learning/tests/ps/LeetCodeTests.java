@@ -560,4 +560,18 @@ public class LeetCodeTests {
         System.out.print("Array with duplicate zeros:");
         arrayUtils.print(input);
     }
+
+    @Test(description = "L05 Remove element",
+            dataProvider = "RemoveElementTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL05", "Arrays", "Remove element"})
+    public void removeElement(int[] input, int val) {
+        P_L05_RemoveElement pL05RemoveElement = new P_L05_RemoveElement();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.printf("Val: %d\nInput array : ", val);
+        arrayUtils.print(input);
+        int length = pL05RemoveElement.removeElementOptimised(input, val);
+        System.out.print("Array after removing elements:");
+        arrayUtils.print(input, length);
+    }
 }
