@@ -26,7 +26,7 @@ Constraints:
 1 <= arr.length <= 104
 1 <= arr[i] <= 105
  */
-public class P_L09_ReplaceElementsWithGreatestElementOnRightSide {
+public class P_1299_ReplaceElementsWithGreatestElementOnRightSide {
     private int getGreatest(int[] arr, int startIndex) {
         if (startIndex == arr.length)
             return -1;

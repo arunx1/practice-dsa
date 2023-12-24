@@ -453,4 +453,12 @@ public class ArrayDataProviders {
                 new int[]{10, 9, 9, 7, 7, 7, 6, 3, 2, 2},
         };
     }
+
+    @DataProvider(name = "AddTwoNumberTestData")
+    public Object[][] getAddTwoNumberTestData() {
+        return new Object[][]{
+                {3, 3},
+                {1, 2},
+        };
+    }
 }

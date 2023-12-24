@@ -18,7 +18,7 @@ Constraints:
 1 <= nums.length <= 5000
 0 <= nums[i] <= 5000
  */
-public class P_L11_SortArrayByParity {
+public class P_905_SortArrayByParity {
     public int[] sortArrayByParity(int[] nums) {
         int currentPointer = 0;
         for (int nextPointer = 0; nextPointer < nums.length; nextPointer++) {

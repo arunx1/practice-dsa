@@ -19,7 +19,7 @@ nums is sorted in non-decreasing order.
 
 Follow up: Squaring each element and sorting the new array is very trivial, could you find an O(n) solution using a different approach?
  */
-public class P_L03_SquaresOfSortedArray {
+public class P_977_SquaresOfSortedArray {
     private void reverseArray(int[] nums, int startIndex, int endIndex) {
         while (startIndex < endIndex) {
             int temp = nums[startIndex];

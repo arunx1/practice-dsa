@@ -15,7 +15,7 @@ Constraints:
 1 <= nums.length <= 105
 nums[i] is either 0 or 1.
  */
-public class P_L01_MaxConsecutiveOnes {
+public class P_485_MaxConsecutiveOnes {
     public int findMaxConsecutiveOnes(int[] nums) {
         int maxConsecutives = 0;
         int currentMax = 0;

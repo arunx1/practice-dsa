@@ -42,7 +42,7 @@ Constraints:
 1 <= heights.length <= 100
 1 <= heights[i] <= 100
  */
-public class P_L12_HeightChecker {
+public class P_1051_HeightChecker {
     public int heightChecker(int[] heights) {
         int[] expectedHeights = new int[heights.length];
         System.arraycopy(heights, 0, expectedHeights, 0, heights.length);

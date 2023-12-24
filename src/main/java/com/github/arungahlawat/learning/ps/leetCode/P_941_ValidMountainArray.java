@@ -26,7 +26,7 @@ Example 4:
 Input: arr = [0,2,3,4,5,2,1,0]
 Output: true
  */
-public class P_L08_ValidMountainArray {
+public class P_941_ValidMountainArray {
     public boolean validMountainArray(int[] arr) {
         if (arr.length < 3)
             return false;

@@ -20,7 +20,7 @@ n == nums.length
 
 Follow up: Could you do it without extra space and in O(n) runtime? You may assume the returned list does not count as extra space.
  */
-public class P_L14_FindMissingNumbers {
+public class P_448_FindMissingNumbers {
     public List<Integer> findDisappearedNumbers(int[] nums) {
         int[] counters = new int[nums.length];
         for (int num : nums) {

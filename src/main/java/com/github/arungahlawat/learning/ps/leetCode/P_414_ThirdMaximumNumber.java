@@ -34,7 +34,7 @@ Constraints:
 
 Follow up: Can you find an O(n) solution?
  */
-public class P_L13_ThirdMaximumNumber {
+public class P_414_ThirdMaximumNumber {
     public int thirdMax(int[] nums) {
         int max = Integer.MIN_VALUE;
         boolean isMax = false, isSecondMax = false, isThirdMax = false;
