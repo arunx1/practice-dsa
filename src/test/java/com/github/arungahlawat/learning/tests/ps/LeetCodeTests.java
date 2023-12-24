@@ -12,7 +12,7 @@ import java.util.List;
 public class LeetCodeTests {
     @BeforeMethod()
     public void beforeMethod() {
-        System.out.println("===============================================");
+        System.out.println("\n===============================================");
     }
 
     @Test(description = "01 Two Sum : Using bruit force",
@@ -668,5 +668,18 @@ public class LeetCodeTests {
         arrayUtils.print(input);
         int misMatchedHeights = pL12HeightChecker.heightChecker(input);
         System.out.printf("Mismatched heights: %d\n", misMatchedHeights);
+    }
+
+    @Test(description = "L13 Third Maximum Number",
+            dataProvider = "ThirdMaxNumberTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL13", "Arrays", "Third Maximum Number"})
+    public void findThirdMaxNumber(int[] input) {
+        P_L13_ThirdMaximumNumber pL13ThirdMaximumNumber = new P_L13_ThirdMaximumNumber();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        int thirdMax = pL13ThirdMaximumNumber.thirdMaxOptimised(input);
+        System.out.printf("Third max number: %d", thirdMax);
     }
 }
