@@ -588,4 +588,17 @@ public class LeetCodeTests {
         System.out.print("Array after removing duplicates:");
         arrayUtils.print(input, length);
     }
+
+    @Test(description = "L07 Check if N and it's double exist in array",
+            dataProvider = "CheckNAndDoubleTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL07", "Arrays", "Check N and Double"})
+    public void checkNAndDoubleExist(int[] input) {
+        P_L07_CheckIfNAndDoubleExistInArray pL07CheckIfNAndDoubleExistInArray = new P_L07_CheckIfNAndDoubleExistInArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        boolean isExist = pL07CheckIfNAndDoubleExistInArray.checkIfExistN2(input);
+        System.out.printf("N and it's double exist in array? %b\n",isExist);
+    }
 }

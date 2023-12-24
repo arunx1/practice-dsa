@@ -348,4 +348,13 @@ public class ArrayDataProviders {
                 new int[]{0},
         };
     }
+
+    @DataProvider(name = "CheckNAndDoubleTestData")
+    public Object[] getCheckNAndDoubleTestData() {
+        return new Object[]{
+                new int[]{10,2,5,3},
+                new int[]{3,1,7,11},
+                new int[]{-10,5,4},
+        };
+    }
 }
