@@ -312,15 +312,15 @@ public class ArrayDataProviders {
                 new int[]{1, 0, 0, 1},
                 new int[]{0, 1, 1, 0, 0, 1, 1},
                 new int[]{1},
-                new int[]{1,1,1,1},
+                new int[]{1, 1, 1, 1},
         };
     }
 
     @DataProvider(name = "NumbersWithEvenNumberOfDigitsTestData")
     public Object[] getNumbersWithEvenNumberOfDigitsTestData() {
         return new Object[]{
-                new int[]{12,345,2,6,7896},
-                new int[]{555,901,482,1771},
+                new int[]{12, 345, 2, 6, 7896},
+                new int[]{555, 901, 482, 1771},
                 new int[]{0, 0, 0, 0},
                 new int[]{1},
         };
@@ -329,22 +329,22 @@ public class ArrayDataProviders {
     @DataProvider(name = "SortedSquaresTestData")
     public Object[] getSortedSquaresTestData() {
         return new Object[]{
-                new int[]{-4,-1,0,3,10},
-                new int[]{-7,-3,2,3,11},
-                new int[]{-7,-3,-2,-1},
-                new int[]{0,1,2,3,4,5},
-                new int[]{-2,2},
-                new int[]{-10000,-9999,-7,-5,0,0,10000},
+                new int[]{-4, -1, 0, 3, 10},
+                new int[]{-7, -3, 2, 3, 11},
+                new int[]{-7, -3, -2, -1},
+                new int[]{0, 1, 2, 3, 4, 5},
+                new int[]{-2, 2},
+                new int[]{-10000, -9999, -7, -5, 0, 0, 10000},
         };
     }
 
     @DataProvider(name = "DuplicateZerosTestData")
     public Object[] getDuplicateZerosTestData() {
         return new Object[]{
-                new int[]{1,0,2,3,0,4,5,0},
-                new int[]{1,2,3},
-                new int[]{1,2,3,0},
-                new int[]{0,1,2,3},
+                new int[]{1, 0, 2, 3, 0, 4, 5, 0},
+                new int[]{1, 2, 3},
+                new int[]{1, 2, 3, 0},
+                new int[]{0, 1, 2, 3},
                 new int[]{0},
         };
     }
@@ -352,9 +352,23 @@ public class ArrayDataProviders {
     @DataProvider(name = "CheckNAndDoubleTestData")
     public Object[] getCheckNAndDoubleTestData() {
         return new Object[]{
-                new int[]{10,2,5,3},
-                new int[]{3,1,7,11},
-                new int[]{-10,5,4},
+                new int[]{10, 2, 5, 3},
+                new int[]{3, 1, 7, 11},
+                new int[]{-10, 5, 4},
+        };
+    }
+
+    @DataProvider(name = "CheckMountainArrayTestData")
+    public Object[] getCheckMountainArrayTestData() {
+        return new Object[]{
+                new int[]{0, 2, 3, 4, 5, 2, 1, 0},
+                new int[]{0, 2, 3, 3, 5, 2, 1, 0},
+                new int[]{2, 1},
+                new int[]{3, 5, 5},
+                new int[]{0, 3, 2, 1},
+                new int[]{0, 3, 2, 3, 5, 3, 2, 1, 0},
+                new int[]{0, 3, 2},
+                new int[]{0, 1, 0},
         };
     }
 }

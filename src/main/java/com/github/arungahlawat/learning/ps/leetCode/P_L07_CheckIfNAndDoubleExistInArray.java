@@ -35,7 +35,6 @@ public class P_L07_CheckIfNAndDoubleExistInArray {
                 return true;
             else
                 existingItems.put(item, true);
-
         }
         return false;
     }
@@ -49,5 +48,4 @@ public class P_L07_CheckIfNAndDoubleExistInArray {
         }
         return false;
     }
-
 }

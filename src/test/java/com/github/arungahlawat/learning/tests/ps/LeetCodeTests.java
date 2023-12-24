@@ -599,6 +599,19 @@ public class LeetCodeTests {
         System.out.print("Input array : ");
         arrayUtils.print(input);
         boolean isExist = pL07CheckIfNAndDoubleExistInArray.checkIfExistN2(input);
-        System.out.printf("N and it's double exist in array? %b\n",isExist);
+        System.out.printf("N and it's double exist in array? %b\n", isExist);
+    }
+
+    @Test(description = "L08 Valid Mountain Array",
+            dataProvider = "CheckMountainArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL08", "Arrays", "Valid Mountain Array"})
+    public void checkIfValidMountainArray(int[] input) {
+        P_L08_ValidMountainArray pL08ValidMountainArray = new P_L08_ValidMountainArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        boolean isExist = pL08ValidMountainArray.validMountainArray(input);
+        System.out.printf("Valid mountain array? %b\n", isExist);
     }
 }
