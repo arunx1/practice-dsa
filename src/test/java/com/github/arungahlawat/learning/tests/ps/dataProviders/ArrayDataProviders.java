@@ -371,4 +371,18 @@ public class ArrayDataProviders {
                 new int[]{0, 1, 0},
         };
     }
+
+    @DataProvider(name = "ReplaceWithGreatestTestData")
+    public Object[] getReplaceWithGreatestTestData() {
+        return new Object[]{
+                new int[]{17, 18, 5, 4, 6, 1},
+                new int[]{400},
+                new int[]{17, 18},
+                new int[]{17, 16},
+                new int[]{0, 0, 0, 0},
+                new int[]{17, 17, 17, 17, 17},
+                new int[]{0, 3, 0},
+                new int[]{-10, 1, 10},
+        };
+    }
 }

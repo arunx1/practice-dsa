@@ -614,4 +614,18 @@ public class LeetCodeTests {
         boolean isExist = pL08ValidMountainArray.validMountainArray(input);
         System.out.printf("Valid mountain array? %b\n", isExist);
     }
+
+    @Test(description = "L09 Replace Elements with Greatest Element on Right Side",
+            dataProvider = "ReplaceWithGreatestTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL09", "Arrays", "Replace with Greatest"})
+    public void replaceWithGreatest(int[] input) {
+        P_L09_ReplaceElementsWithGreatestElementOnRightSide pL09ReplaceElementsWithGreatestElementOnRightSide = new P_L09_ReplaceElementsWithGreatestElementOnRightSide();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = pL09ReplaceElementsWithGreatestElementOnRightSide.replaceElementsOptimised(input);
+        System.out.print("Array after replacements:");
+        arrayUtils.print(input);
+    }
 }
