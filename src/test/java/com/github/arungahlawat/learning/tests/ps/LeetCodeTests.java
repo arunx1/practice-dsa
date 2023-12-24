@@ -584,7 +584,7 @@ public class LeetCodeTests {
         ArrayUtils arrayUtils = new ArrayUtils();
         System.out.print("Input array : ");
         arrayUtils.print(input);
-        int length = pL06RemoveDuplicatesFromSortedArray.removeDuplicatesOptimised(input);
+        int length = pL06RemoveDuplicatesFromSortedArray.removeDuplicatesBetter(input);
         System.out.print("Array after removing duplicates:");
         arrayUtils.print(input, length);
     }

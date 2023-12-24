@@ -47,11 +47,24 @@ public class P_L06_RemoveDuplicatesFromSortedArray {
     public int removeDuplicatesOptimised(int[] nums) {
         int i = 0;
         for (int num : nums) {
-            if (i < 1 || num > nums[i-1]) {
+            if (i < 1 || num > nums[i - 1]) {
                 nums[i] = num;
                 i++;
             }
         }
         return i;
+    }
+
+    public int removeDuplicatesBetter(int[] nums) {
+        if (nums == null || nums.length == 0)
+            return 0;
+        int currentPointer = 1;
+        for (int nextPointer = 1; nextPointer < nums.length; nextPointer++) {
+            if (nums[nextPointer] != nums[nextPointer - 1]) {
+                nums[currentPointer] = nums[nextPointer];
+                currentPointer++;
+            }
+        }
+        return currentPointer;
     }
 }
