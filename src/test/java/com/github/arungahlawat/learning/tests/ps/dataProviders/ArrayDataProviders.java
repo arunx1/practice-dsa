@@ -407,4 +407,14 @@ public class ArrayDataProviders {
                 new int[]{1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 10, 12, 14},
         };
     }
+
+    @DataProvider(name = "HeightCheckerTestData")
+    public Object[] getHeightCheckerTestData() {
+        return new Object[]{
+                new int[]{1, 1, 4, 2, 1, 3},
+                new int[]{5, 1, 2, 3, 4},
+                new int[]{1, 2, 3, 4, 5},
+                new int[]{1, 1, 2, 3, 3, 4, 4, 6, 6},
+        };
+    }
 }

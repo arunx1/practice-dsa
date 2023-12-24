@@ -656,4 +656,17 @@ public class LeetCodeTests {
         System.out.print("Array after sorting by parity:");
         arrayUtils.print(input);
     }
+
+    @Test(description = "L12 Height Checker",
+            dataProvider = "HeightCheckerTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"LL12", "Arrays", "Height Checker"})
+    public void heightChecker(int[] input) {
+        P_L12_HeightChecker pL12HeightChecker = new P_L12_HeightChecker();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        int misMatchedHeights = pL12HeightChecker.heightChecker(input);
+        System.out.printf("Mismatched heights: %d\n", misMatchedHeights);
+    }
 }
