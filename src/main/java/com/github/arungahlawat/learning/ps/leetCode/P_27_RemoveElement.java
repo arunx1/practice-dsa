@@ -24,7 +24,7 @@ Constraints:
 0 <= nums[i] <= 50
 0 <= val <= 100
  */
-public class P_L05_RemoveElement {
+public class P_27_RemoveElement {
     private int shiftArrayLeft(int[] nums, int startIndex, int length) {
         int indexPointer = startIndex;
         while (indexPointer < length - 1) {

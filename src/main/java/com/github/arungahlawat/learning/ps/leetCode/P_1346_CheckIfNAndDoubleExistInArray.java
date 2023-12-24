@@ -27,7 +27,7 @@ Constraints:
 2 <= arr.length <= 500
 -103 <= arr[i] <= 103
  */
-public class P_L07_CheckIfNAndDoubleExistInArray {
+public class P_1346_CheckIfNAndDoubleExistInArray {
     public boolean checkIfExist(int[] arr) {
         Hashtable<Integer, Boolean> existingItems = new Hashtable<>();
         for (int item : arr) {

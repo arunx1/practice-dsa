@@ -27,7 +27,7 @@ Constraints:
 -100 <= nums[i] <= 100
 nums is sorted in non-decreasing order.
  */
-public class P_L06_RemoveDuplicatesFromSortedArray {
+public class P_26_RemoveAllDuplicatesFromSortedArray {
     public int removeDuplicates(int[] nums) {
         if (nums.length < 2)
             return nums.length;

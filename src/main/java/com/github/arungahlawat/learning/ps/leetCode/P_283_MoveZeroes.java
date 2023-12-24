@@ -25,7 +25,7 @@ Constraints:
 
 Follow up: Could you minimize the total number of operations done?
  */
-public class P_L10_MoveZeroes {
+public class P_283_MoveZeroes {
     public void moveZeroes(int[] nums) {
         if (nums == null || nums.length == 0)
             return;

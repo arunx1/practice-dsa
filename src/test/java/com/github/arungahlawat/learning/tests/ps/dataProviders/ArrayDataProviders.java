@@ -394,4 +394,71 @@ public class ArrayDataProviders {
                 new int[]{-15, 0, -18, 0, 0, 14, 12, 9, 0, 2},
         };
     }
+
+    @DataProvider(name = "SortArrayByParityTestData")
+    public Object[] getSortArrayByParityTestData() {
+        return new Object[]{
+                new int[]{3, 1, 2, 4},
+                new int[]{0},
+                new int[]{0, 2, 4, 6, 8, 10, 12, 14},
+                new int[]{1, 3, 5, 7, 9, 11},
+                new int[]{1, 3, 5, 7, 9, 11, 2},
+                new int[]{1, 0, 2, 4, 6, 8, 10, 12, 14},
+                new int[]{1, 0, 3, 2, 5, 4, 7, 6, 9, 8, 10, 12, 14},
+        };
+    }
+
+    @DataProvider(name = "HeightCheckerTestData")
+    public Object[] getHeightCheckerTestData() {
+        return new Object[]{
+                new int[]{1, 1, 4, 2, 1, 3},
+                new int[]{5, 1, 2, 3, 4},
+                new int[]{1, 2, 3, 4, 5},
+                new int[]{1, 1, 2, 3, 3, 4, 4, 6, 6},
+        };
+    }
+
+    @DataProvider(name = "ThirdMaxNumberTestData")
+    public Object[] getThirdMaxNumberTestData() {
+        return new Object[]{
+                new int[]{1, -2147483648, 2},
+                new int[]{3, 2, 1},
+                new int[]{1, 2, 3, 4, 5, 6, 7, 7, 6, 5, 4, 8, 9, 8, 11, 2},
+                new int[]{1, 2},
+                new int[]{2, 2, 3, 1},
+                new int[]{Integer.MIN_VALUE, -1800, 0, 1800, Integer.MAX_VALUE},
+                new int[]{1, 2, Integer.MIN_VALUE},
+                new int[]{1, Integer.MIN_VALUE, 2},
+                new int[]{1, Integer.MIN_VALUE, Integer.MIN_VALUE},
+                new int[]{1, Integer.MIN_VALUE, Integer.MIN_VALUE, 0},
+                new int[]{1, Integer.MIN_VALUE, Integer.MIN_VALUE, 0, 2},
+                new int[]{Integer.MIN_VALUE, 1, Integer.MIN_VALUE},
+                new int[]{Integer.MIN_VALUE, 1, 0, Integer.MIN_VALUE, -2},
+                new int[]{Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE},
+                new int[]{Integer.MIN_VALUE, Integer.MIN_VALUE, Integer.MIN_VALUE, 0, 1, -2, 4},
+                new int[]{Integer.MIN_VALUE, Integer.MIN_VALUE, 1},
+                new int[]{Integer.MIN_VALUE, 1, 1},
+        };
+    }
+
+    @DataProvider(name = "FindMissingNumbersTestData")
+    public Object[] getFindMissingNumbersTestData() {
+        return new Object[]{
+                new int[]{1, 1, 1, 1, 1},
+                new int[]{1},
+                new int[]{4, 3, 2, 7, 8, 2, 3, 1},
+                new int[]{1, 1},
+                new int[]{1, 2, 3, 4, 5, 6, 7, 8, 10, 10},
+                new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1},
+                new int[]{10, 9, 9, 7, 7, 7, 6, 3, 2, 2},
+        };
+    }
+
+    @DataProvider(name = "AddTwoNumberTestData")
+    public Object[][] getAddTwoNumberTestData() {
+        return new Object[][]{
+                {3, 3},
+                {1, 2},
+        };
+    }
 }

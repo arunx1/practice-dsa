@@ -23,7 +23,7 @@ Constraints:
 1 <= nums.length <= 500
 1 <= nums[i] <= 105
  */
-public class P_L02_NumbersWithEvenNumberOfDigits {
+public class P_1295_NumbersWithEvenNumberOfDigits {
     public int getDigitCount(int num) {
         int digitCount = 0;
         while (num != 0) {

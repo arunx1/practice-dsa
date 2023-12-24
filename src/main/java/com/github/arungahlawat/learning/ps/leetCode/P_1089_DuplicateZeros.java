@@ -18,7 +18,7 @@ Constraints:
 1 <= arr.length <= 104
 0 <= arr[i] <= 9
  */
-public class P_L04_DuplicateZeros {
+public class P_1089_DuplicateZeros {
     private void shiftArray(int[] arr, int startIndex) {
         int shiftIndex = arr.length - 1;
         while (shiftIndex > startIndex) {
