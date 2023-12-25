@@ -66,6 +66,17 @@ public class ArrayDataProviders {
         };
     }
 
+    @DataProvider(name = "RansomNoteTestData")
+    public Object[][] getRansomNoteTestData() {
+        return new Object[][]{
+                {"a", "b"},
+                {"aa", "ab"},
+                {"aa", "aab"},
+                {"hello", "helloworld"},
+                {"hi", "ohhibuddy"},
+        };
+    }
+
     @DataProvider(name = "ReverseIntegerTestData")
     public Object[] getReverseIntegerTestData() {
         return new Object[]{

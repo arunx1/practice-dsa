@@ -522,6 +522,17 @@ public class LeetCodeTests {
         arrayUtils.print(input);
     }
 
+    @Test(description = "383. Ransom Note",
+            dataProvider = "RansomNoteTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Strings", "Ransom Note"})
+    public void ransomNote(String ransomNote, String magazine) {
+        P_383_RansomNote p383RansomNote = new P_383_RansomNote();
+        System.out.printf("ransomNote: '%s', magazine: '%s'\n", ransomNote, magazine);
+        boolean canConstruct = p383RansomNote.canConstruct(ransomNote, magazine);
+        System.out.printf("Can construct ransom note from magazine? '%b'", canConstruct);
+    }
+
     @Test(description = "412 Fizz Buzz",
             dataProvider = "FizzBuzzTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
