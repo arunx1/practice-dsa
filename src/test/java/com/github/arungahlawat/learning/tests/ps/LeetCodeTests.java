@@ -695,6 +695,17 @@ public class LeetCodeTests {
         arrayUtils.print(input);
     }
 
+    @Test(description = "1342 Number of Steps to Reduce a Number to Zero",
+            dataProvider = "NumberOfStepsToReduceANumberToZeroTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Math", "Number of Steps to Reduce a Number to Zero"})
+    public void numberOfStepsToReduceANumberToZero(int n) {
+        P_1342_NumberOfStepsToReduceANumberToZero p1342NumberOfStepsToReduceANumberToZero = new P_1342_NumberOfStepsToReduceANumberToZero();
+        System.out.printf("n : %d\n", n);
+        int steps = p1342NumberOfStepsToReduceANumberToZero.numberOfSteps(n);
+        System.out.printf("Steps to reduce number to 0: %d", steps);
+    }
+
     @Test(description = "1346 Check if N and it's double exist in array",
             dataProvider = "CheckNAndDoubleTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,

@@ -485,6 +485,16 @@ public class ArrayDataProviders {
         };
     }
 
+    @DataProvider(name = "NumberOfStepsToReduceANumberToZeroTestData")
+    public Object[] getNumberOfStepsToReduceANumberToZeroTestData() {
+        return new Object[]{
+                14,
+                8,
+                123,
+                0
+        };
+    }
+
     @DataProvider(name = "RichestCustomerWealthTestData")
     public Object[][] getRichestCustomerWealthTestData() {
         return new Object[][]{
