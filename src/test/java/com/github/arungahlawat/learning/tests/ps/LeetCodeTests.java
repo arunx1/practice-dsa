@@ -586,6 +586,22 @@ public class LeetCodeTests {
         System.out.printf("Max consecutive ones : %d", maxConsecutive);
     }
 
+    @Test(description = "876 Middle of the Linked List",
+            dataProvider = "MiddleOfTheLinkedListTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Linked List", "Middle of the Linked List"})
+    public void findMiddleOfTheLinkedList(int[] list) {
+        LinkedList linkedList = new LinkedList(list);
+        System.out.print("List: ");
+        linkedList.print();
+        P_876_MiddleOfTheLinkedList p876MiddleOfTheLinkedList = new P_876_MiddleOfTheLinkedList();
+        ListNode result = p876MiddleOfTheLinkedList.middleNode(linkedList.getHead());
+        if (result != null)
+            System.out.printf("Middle node: %d", result.val);
+        else
+            System.out.println("Empty list");
+    }
+
     @Test(description = "905 Sort Array By Parity",
             dataProvider = "SortArrayByParityTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,

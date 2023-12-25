@@ -219,6 +219,18 @@ public class ArrayDataProviders {
         };
     }
 
+    @DataProvider(name = "MiddleOfTheLinkedListTestData")
+    public Object[] getMiddleOfTheLinkedListTestData() {
+        return new Object[]{
+                new int[]{1, 2, 3, 4},
+                new int[]{},
+                new int[]{1},
+                new int[]{1, 2, 3, 4, 5},
+                new int[]{1, 2, 3, 4, 5, 6},
+                new int[]{1, 2},
+        };
+    }
+
     @DataProvider(name = "ValidParenthesesTestData")
     public Object[] getValidParenthesesTestData() {
         return new Object[]{
