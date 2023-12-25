@@ -522,6 +522,17 @@ public class LeetCodeTests {
         arrayUtils.print(input);
     }
 
+    @Test(description = "412 Fizz Buzz",
+            dataProvider = "FizzBuzzTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Array", "Fizz Buzz"})
+    public void fizzBuzz(int n) {
+        P_412_FizzBuzz p412FizzBuzz = new P_412_FizzBuzz();
+        System.out.printf("n : %d\n", n);
+        List<String> answer = p412FizzBuzz.fizzBuzz(n);
+        new ArrayUtils().print(answer);
+    }
+
     @Test(description = "414 Third Maximum Number",
             dataProvider = "ThirdMaxNumberTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,

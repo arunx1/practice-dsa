@@ -475,6 +475,16 @@ public class ArrayDataProviders {
         };
     }
 
+    @DataProvider(name = "FizzBuzzTestData")
+    public Object[] getFizzBuzzTestData() {
+        return new Object[]{
+                3,
+                5,
+                15,
+                23
+        };
+    }
+
     @DataProvider(name = "RichestCustomerWealthTestData")
     public Object[][] getRichestCustomerWealthTestData() {
         return new Object[][]{
