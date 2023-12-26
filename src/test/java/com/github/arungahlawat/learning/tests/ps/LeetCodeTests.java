@@ -508,6 +508,20 @@ public class LeetCodeTests {
         System.out.printf("Linked list has cycle? %s\n", isCyclic);
     }
 
+    @Test(description = "142. Linked List Cycle II",
+            dataProvider = "LinkedListCycleTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Linked Lists", "Linked List Cycle II"})
+    public void findStartOfCycleInLinkedListWithCycle(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(true, linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        P_142_LinkedListCycle2 p142LinkedListCycle2 = new P_142_LinkedListCycle2();
+        ListNode cycleStart = p142LinkedListCycle2.detectCycle(linkedList.getHead());
+        if (cycleStart != null)
+            System.out.printf("Cycle start at %d\n", cycleStart.val);
+    }
+
     @Test(description = "169 Majority Element",
             dataProvider = "RemoveDuplicatesFromSortedArrayTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
