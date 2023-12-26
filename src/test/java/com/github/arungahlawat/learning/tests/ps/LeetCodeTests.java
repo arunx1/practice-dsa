@@ -495,6 +495,33 @@ public class LeetCodeTests {
         arrayUtils.print(nums1, m + n);
     }
 
+    @Test(description = "141. Linked List Cycle",
+            dataProvider = "LinkedListCycleTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Linked Lists", "Linked List Cycle"})
+    public void checkIfLinkedListHasCycle(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(true, linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        P_141_LinkedListCycle p141LinkedListCycle = new P_141_LinkedListCycle();
+        boolean isCyclic = p141LinkedListCycle.hasCycle(linkedList.getHead());
+        System.out.printf("Linked list has cycle? %s\n", isCyclic);
+    }
+
+    @Test(description = "142. Linked List Cycle II",
+            dataProvider = "LinkedListCycleTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Linked Lists", "Linked List Cycle II"})
+    public void findStartOfCycleInLinkedListWithCycle(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(true, linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        P_142_LinkedListCycle2 p142LinkedListCycle2 = new P_142_LinkedListCycle2();
+        ListNode cycleStart = p142LinkedListCycle2.detectCycle(linkedList.getHead());
+        if (cycleStart != null)
+            System.out.printf("Cycle start at %d\n", cycleStart.val);
+    }
+
     @Test(description = "169 Majority Element",
             dataProvider = "RemoveDuplicatesFromSortedArrayTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
@@ -520,6 +547,28 @@ public class LeetCodeTests {
         p283MoveZeroes.moveZeroes(input);
         System.out.print("Array after moving all zeros to right:");
         arrayUtils.print(input);
+    }
+
+    @Test(description = "383. Ransom Note",
+            dataProvider = "RansomNoteTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Strings", "Ransom Note"})
+    public void ransomNote(String ransomNote, String magazine) {
+        P_383_RansomNote p383RansomNote = new P_383_RansomNote();
+        System.out.printf("ransomNote: '%s', magazine: '%s'\n", ransomNote, magazine);
+        boolean canConstruct = p383RansomNote.canConstruct(ransomNote, magazine);
+        System.out.printf("Can construct ransom note from magazine? '%b'", canConstruct);
+    }
+
+    @Test(description = "412 Fizz Buzz",
+            dataProvider = "FizzBuzzTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Array", "Fizz Buzz"})
+    public void fizzBuzz(int n) {
+        P_412_FizzBuzz p412FizzBuzz = new P_412_FizzBuzz();
+        System.out.printf("n : %d\n", n);
+        List<String> answer = p412FizzBuzz.fizzBuzz(n);
+        new ArrayUtils().print(answer);
     }
 
     @Test(description = "414 Third Maximum Number",
@@ -573,6 +622,22 @@ public class LeetCodeTests {
         arrayUtils.print(input);
         int maxConsecutive = p485MaxConsecutiveOnes.findMaxConsecutiveOnesUsingSlidingWindow(input);
         System.out.printf("Max consecutive ones : %d", maxConsecutive);
+    }
+
+    @Test(description = "876 Middle of the Linked List",
+            dataProvider = "MiddleOfTheLinkedListTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Linked List", "Middle of the Linked List"})
+    public void findMiddleOfTheLinkedList(int[] list) {
+        LinkedList linkedList = new LinkedList(list);
+        System.out.print("List: ");
+        linkedList.print();
+        P_876_MiddleOfTheLinkedList p876MiddleOfTheLinkedList = new P_876_MiddleOfTheLinkedList();
+        ListNode result = p876MiddleOfTheLinkedList.middleNode(linkedList.getHead());
+        if (result != null)
+            System.out.printf("Middle node: %d", result.val);
+        else
+            System.out.println("Empty list");
     }
 
     @Test(description = "905 Sort Array By Parity",
@@ -684,6 +749,28 @@ public class LeetCodeTests {
         arrayUtils.print(input);
     }
 
+    @Test(description = "1342.01 Number of Steps to Reduce a Number to Zero",
+            dataProvider = "NumberOfStepsToReduceANumberToZeroTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Math", "Number of Steps to Reduce a Number to Zero"})
+    public void numberOfStepsToReduceANumberToZero(int n) {
+        P_1342_NumberOfStepsToReduceANumberToZero p1342NumberOfStepsToReduceANumberToZero = new P_1342_NumberOfStepsToReduceANumberToZero();
+        System.out.printf("n : %d\n", n);
+        int steps = p1342NumberOfStepsToReduceANumberToZero.numberOfSteps(n);
+        System.out.printf("Steps to reduce number to 0: %d", steps);
+    }
+
+    @Test(description = "1342.02 Number of Steps to Reduce a Number to Zero",
+            dataProvider = "NumberOfStepsToReduceANumberToZeroTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Math", "Number of Steps to Reduce a Number to Zero"})
+    public void numberOfStepsToReduceANumberToZeroUsingBitwise(int n) {
+        P_1342_NumberOfStepsToReduceANumberToZero p1342NumberOfStepsToReduceANumberToZero = new P_1342_NumberOfStepsToReduceANumberToZero();
+        System.out.printf("n : %d\n", n);
+        int steps = p1342NumberOfStepsToReduceANumberToZero.numberOfStepsUsingBitwise(n);
+        System.out.printf("Steps to reduce number to 0: %d", steps);
+    }
+
     @Test(description = "1346 Check if N and it's double exist in array",
             dataProvider = "CheckNAndDoubleTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
@@ -697,6 +784,33 @@ public class LeetCodeTests {
         System.out.printf("N and it's double exist in array? %b", isExist);
     }
 
+    @Test(description = "1480 Running Sum of 1d Array",
+            dataProvider = "RunningSumOfOneDArrayTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Array", "Running Sum of 1d Array"})
+    public void runningSumOf1dArray(int[] input) {
+        P_1480_RunningSumOfOneDArray p1480RunningSumOfOneDArray = new P_1480_RunningSumOfOneDArray();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = p1480RunningSumOfOneDArray.runningSum(input);
+        System.out.print("Running sum: ");
+        arrayUtils.print(input);
+    }
+
+    @Test(description = "1672 Richest Customer Wealth",
+            dataProvider = "RichestCustomerWealthTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Array", "Richest Customer Wealth"})
+    public void richestCustomerWealth(int[][] input) {
+        P_1672_RichestCustomerWealth p1672RichestCustomerWealth = new P_1672_RichestCustomerWealth();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : \n");
+        arrayUtils.print(input);
+        int richest = p1672RichestCustomerWealth.maximumWealth(input);
+        System.out.printf("Richest : %d", richest);
+    }
+
     @Test(description = "2235 Add two numbers",
             dataProvider = "AddTwoNumberTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
@@ -706,5 +820,19 @@ public class LeetCodeTests {
         System.out.printf("a : %d, b : %d ", a, b);
         int sum = p2235AddTwoNumbers.sum(a, b);
         System.out.printf("Sum : %d", sum);
+    }
+
+    @Test(description = "2974 Minimum Number Game",
+            dataProvider = "MinimumNumberGameTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Array", "Minimum Number Game"})
+    public void minimumNumberGame(int[] input) {
+        P_2974_MinimumNumberGame p2974MinimumNumberGame = new P_2974_MinimumNumberGame();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = p2974MinimumNumberGame.numberGame(input);
+        System.out.print("Result array: ");
+        arrayUtils.print(input);
     }
 }

@@ -66,6 +66,17 @@ public class ArrayDataProviders {
         };
     }
 
+    @DataProvider(name = "RansomNoteTestData")
+    public Object[][] getRansomNoteTestData() {
+        return new Object[][]{
+                {"a", "b"},
+                {"aa", "ab"},
+                {"aa", "aab"},
+                {"hello", "helloworld"},
+                {"hi", "ohhibuddy"},
+        };
+    }
+
     @DataProvider(name = "ReverseIntegerTestData")
     public Object[] getReverseIntegerTestData() {
         return new Object[]{
@@ -216,6 +227,37 @@ public class ArrayDataProviders {
                 {new int[]{1}, 1},
                 {new int[]{1, 2}, 1},
                 {new int[]{1, 2}, 2},
+        };
+    }
+
+    @DataProvider(name = "MiddleOfTheLinkedListTestData")
+    public Object[] getMiddleOfTheLinkedListTestData() {
+        return new Object[]{
+                new int[]{1, 2, 3, 4},
+                new int[]{},
+                new int[]{1},
+                new int[]{1, 2, 3, 4, 5},
+                new int[]{1, 2, 3, 4, 5, 6},
+                new int[]{1, 2},
+        };
+    }
+
+    @DataProvider(name = "LinkedListCycleTestData")
+    public Object[] getLinkedListCycleTestData() {
+        return new Object[]{
+                new int[]{1, 2, 3, 4, 5, 6},
+                new int[]{1, 2, 3, 4, 5, 5},
+                new int[]{1, 2, 3, 4, 5, 4},
+                new int[]{1, 2, 3, 4, 5, 3},
+                new int[]{1, 1},
+                new int[]{1},
+                new int[]{-1, 1},
+                new int[]{0, 0},
+                new int[]{1, 0, 1},
+                new int[]{6, 5, 4, 3, 2, 1},
+                new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 3},
+                new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 9},
+                new int[]{1, 2, 3, 4, 5, 6, 7, 8, 9, 1},
         };
     }
 
@@ -454,11 +496,63 @@ public class ArrayDataProviders {
         };
     }
 
+    @DataProvider(name = "RunningSumOfOneDArrayTestData")
+    public Object[] getRunningSumOfOneDArrayTestData() {
+        return new Object[]{
+                new int[]{1, 1, 1, 1, 1},
+                new int[]{1},
+                new int[]{4, 3, 2, 7, 8, 2, 3, 1},
+                new int[]{1, 1},
+                new int[]{1, 2, 3, 4, 5, 6, 7, 8, 10, 10},
+                new int[]{10, 9, 8, 7, 6, 5, 4, 3, 2, 1},
+                new int[]{10, 9, 9, 7, 7, 7, 6, 3, 2, 2},
+        };
+    }
+
+    @DataProvider(name = "MinimumNumberGameTestData")
+    public Object[] getMinimumNumberGameTestData() {
+        return new Object[]{
+                new int[]{5, 4, 2, 3},
+                new int[]{2, 5},
+        };
+    }
+
     @DataProvider(name = "AddTwoNumberTestData")
     public Object[][] getAddTwoNumberTestData() {
         return new Object[][]{
                 {3, 3},
                 {1, 2},
+        };
+    }
+
+    @DataProvider(name = "FizzBuzzTestData")
+    public Object[] getFizzBuzzTestData() {
+        return new Object[]{
+                3,
+                5,
+                15,
+                23
+        };
+    }
+
+    @DataProvider(name = "NumberOfStepsToReduceANumberToZeroTestData")
+    public Object[] getNumberOfStepsToReduceANumberToZeroTestData() {
+        return new Object[]{
+                14,
+                8,
+                123,
+                0
+        };
+    }
+
+    @DataProvider(name = "RichestCustomerWealthTestData")
+    public Object[][] getRichestCustomerWealthTestData() {
+        return new Object[][]{
+                {new int[]{1, 2, 4}, new int[]{1, 3, 4}},
+                {new int[]{}, new int[]{}},
+                {new int[]{0}, new int[]{0}},
+                {new int[]{1, 2, 3}, new int[]{4, 3, 1}},
+                {new int[]{1, 2, 3, 4, 5}, new int[]{4, 5, 6, 7, 8}},
         };
     }
 }
