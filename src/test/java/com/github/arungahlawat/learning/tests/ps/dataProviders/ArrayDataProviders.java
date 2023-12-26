@@ -490,6 +490,14 @@ public class ArrayDataProviders {
         };
     }
 
+    @DataProvider(name = "MinimumNumberGameTestData")
+    public Object[] getMinimumNumberGameTestData() {
+        return new Object[]{
+                new int[]{5, 4, 2, 3},
+                new int[]{2, 5},
+        };
+    }
+
     @DataProvider(name = "AddTwoNumberTestData")
     public Object[][] getAddTwoNumberTestData() {
         return new Object[][]{

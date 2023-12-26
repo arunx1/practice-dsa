@@ -794,4 +794,18 @@ public class LeetCodeTests {
         int sum = p2235AddTwoNumbers.sum(a, b);
         System.out.printf("Sum : %d", sum);
     }
+
+    @Test(description = "2974 Minimum Number Game",
+            dataProvider = "MinimumNumberGameTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Array", "Minimum Number Game"})
+    public void minimumNumberGame(int[] input) {
+        P_2974_MinimumNumberGame p2974MinimumNumberGame = new P_2974_MinimumNumberGame();
+        ArrayUtils arrayUtils = new ArrayUtils();
+        System.out.print("Input array : ");
+        arrayUtils.print(input);
+        input = p2974MinimumNumberGame.numberGame(input);
+        System.out.print("Result array: ");
+        arrayUtils.print(input);
+    }
 }
