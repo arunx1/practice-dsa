@@ -495,6 +495,19 @@ public class LeetCodeTests {
         arrayUtils.print(nums1, m + n);
     }
 
+    @Test(description = "141. Linked List Cycle",
+            dataProvider = "LinkedListCycleTestData",
+            dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
+            groups = {"Linked Lists", "Linked List Cycle"})
+    public void checkIfLinkedListHasCycle(int[] linkedListData) {
+        LinkedList linkedList = new LinkedList(true, linkedListData);
+        System.out.print("Linked list: ");
+        linkedList.print();
+        P_141_LinkedListCycle p141LinkedListCycle = new P_141_LinkedListCycle();
+        boolean isCyclic = p141LinkedListCycle.hasCycle(linkedList.getHead());
+        System.out.printf("Linked list has cycle? %s\n", isCyclic);
+    }
+
     @Test(description = "169 Majority Element",
             dataProvider = "RemoveDuplicatesFromSortedArrayTestData",
             dataProviderClass = com.github.arungahlawat.learning.tests.ps.dataProviders.ArrayDataProviders.class,
