@@ -10,7 +10,7 @@ public class DSAME_02_01_TowersOfHanoiPuzzle {
             return;
         }
         towersOfHanoi(towerHeight, 'A', 'B', 'C');
-        System.out.println();
+        System.out.printf("\nTotal moves: %.0f\n",Math.pow(2, towerHeight)-1);
     }
 
     private void towersOfHanoi(int n, char sourceTower, char destinationTower, char temporaryTower) {

@@ -3,13 +3,15 @@ package com.github.arungahlawat.learning.tests.ps;
 import com.github.arungahlawat.learning.dataStructures.LinkedList;
 import com.github.arungahlawat.learning.dataStructures.helpers.ListNode;
 import com.github.arungahlawat.learning.ps.dataStructuresAndAlgorithmsMadeEasy.*;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
 public class DataStructuresAndAlgorithmsMadeEasyTests {
-    @BeforeMethod()
+    @BeforeMethod(alwaysRun = true)
+    @AfterTest
     public void beforeMethod() {
-        System.out.println("===============================================");
+        System.out.println("=".repeat(50));
     }
 
     @Test(description = "02.01 Print moves for moving disks from Tower 'A' to tower 'B' using Towers of Hanoi puzzle",
