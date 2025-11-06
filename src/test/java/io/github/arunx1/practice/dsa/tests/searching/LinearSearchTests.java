@@ -1,0 +1,14 @@
+package io.github.arunx1.practice.dsa.tests.searching;
+
+import io.github.arunx1.practice.dsa.searching.LinearSearch;
+
+public class LinearSearchTests {
+    public static void main(String[] args) {
+        LinearSearch linearSearch = new LinearSearch(90, 10, 0, 1, 12, 2);
+        int index = linearSearch.search();
+        if (index == -1)
+            System.out.println("Not found");
+        else
+            System.out.printf("Found at index %d", index);
+    }
+}
